@@ -1,7 +1,5 @@
 package leetcode.explore.queueStack;
 
-import java.util.ArrayList;
-
 /**
  * 设计一个支持 push，pop，top 操作，并能在常数时间内检索到最小元素的栈。
  * 该结构用数组实现
