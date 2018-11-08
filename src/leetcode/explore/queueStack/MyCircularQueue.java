@@ -62,7 +62,7 @@ public class MyCircularQueue {
         if (isEmpty()) {
             return -1;
         }
-        int temp = tail == 0? (maxSize - 1) : (tail - 1);
+        int temp = tail == 0? (maxSize - 1) : (tail - 1);  // tail的前一位总是尾元素
         return data[temp];
     }
 
