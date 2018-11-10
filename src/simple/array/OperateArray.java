@@ -1,4 +1,4 @@
-package basic.array;
+package simple.array;
 
 public class OperateArray {
 

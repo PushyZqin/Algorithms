@@ -1,4 +1,4 @@
-package basic;
+package simple;
 
 /**
  * 计算0~200之间有多少个素数，并打印出素数的值

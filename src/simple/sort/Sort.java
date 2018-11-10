@@ -1,4 +1,4 @@
-package basic.sort;
+package simple.sort;
 
 import java.util.Arrays;
 
@@ -21,7 +21,7 @@ public class Sort {
                 j--;
             }
         }
-        System.out.println("Select basic.sort result is " + Arrays.toString(arr));
+        System.out.println("Select simple.sort result is " + Arrays.toString(arr));
     }
 
     /**
@@ -44,7 +44,7 @@ public class Sort {
             arr[i] = temp;
         }
 
-        System.out.println("Select basic.sort result is " + Arrays.toString(arr));
+        System.out.println("Select simple.sort result is " + Arrays.toString(arr));
     }
 
     /**
@@ -65,7 +65,7 @@ public class Sort {
             }
         }
 
-        System.out.println("Bubble basic.sort result is " + Arrays.toString(arr));
+        System.out.println("Bubble simple.sort result is " + Arrays.toString(arr));
     }
 
     public static void main(String[] args) {
