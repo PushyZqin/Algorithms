@@ -8,13 +8,13 @@ import java.util.Stack;
  * @author Pushy
  * @since 2018/11/14 12:18
  */
-public class MyQueue {
+public class StackToQueue {
 
     private Stack<Integer> stack1;
     private Stack<Integer> stack2;
 
     /** Initialize your data structure here. */
-    public MyQueue() {
+    public StackToQueue() {
         stack1 = new Stack<>();
         stack2 = new Stack<>();
     }
@@ -60,7 +60,7 @@ public class MyQueue {
     }
 
     public static void main(String[] args) {
-        MyQueue queue = new MyQueue();
+        StackToQueue queue = new StackToQueue();
         queue.push(1);
         queue.push(2);
         int res1 = queue.peek();  // 返回 1
