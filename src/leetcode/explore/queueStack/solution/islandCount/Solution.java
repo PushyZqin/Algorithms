@@ -38,10 +38,10 @@ public class Solution {
 
         visited[x][y] = true;  // 标记为访问过
 
-        numIslandsDFS(grid, visited, x - 1, y);
-        numIslandsDFS(grid, visited, x + 1, y);
-        numIslandsDFS(grid, visited, x, y - 1);
-        numIslandsDFS(grid, visited, x, y + 1);
+        numIslandsDFS(grid, visited, x - 1, y);  // 左
+        numIslandsDFS(grid, visited, x + 1, y);  // 右
+        numIslandsDFS(grid, visited, x, y - 1);  // 下
+        numIslandsDFS(grid, visited, x, y + 1);  // 上
     }
 
     public static void main(String[] args) {

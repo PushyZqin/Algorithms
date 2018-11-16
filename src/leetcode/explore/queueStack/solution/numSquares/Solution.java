@@ -24,27 +24,30 @@ public class Solution {
         while (!queue.isEmpty()) {
             int size = queue.size();
             for (int i = 0; i < size; i++) {
-                Integer temp = queue.remove();
-                if (temp == 0) {
+                Integer cur = queue.remove();
+                if (cur == 0) { // 当前遍历到的节点时目标节点
                     return step;
                 }
-                Queue<Integer> neighbors = getNeighbors(temp);
-                queue.addAll(neighbors);
+                Queue<Integer> neighbors = getNeighbors(cur);  // 获取相邻节点
+                queue.addAll(neighbors);  // 将获取到的相邻节点队列集合全部添加到待处理队列当中
             }
             step++;
         }
         return -1;
     }
 
-    private Queue<Integer> getNeighbors(Integer temp) {
+    /**
+     * 获取cur节点的所有相邻节点，即获取：当前节点的值减去，小于它的所有完全平方数的差（结果必须大于0）的队列
+     */
+    private Queue<Integer> getNeighbors(Integer cur) {
         Queue<Integer> queue = new ArrayDeque<>();
         int count = 1;
-        while (count <= temp) {
-            int sum = temp - (count * count);
+        while (count <= cur) {
+            int sum = cur - (count * count);
             if (sum < 0) {
                 break;
             }
-            if (!visited.contains(sum)) {
+            if (!visited.contains(sum)) {  // 判断是否被访问过
                 visited.add(sum);
                 queue.add(sum);
             }
