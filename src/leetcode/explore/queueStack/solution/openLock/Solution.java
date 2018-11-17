@@ -22,17 +22,20 @@ public class Solution {
 
         int res = 0;
         while (!queue.isEmpty()) {
+            res++;
             int size = queue.size();
             for (int i = 0; i < size; i++) {
-                String node = queue.remove();
-                if (node.equals(target)) {
-                    return res;
-                }
+                String cur = queue.remove();
                 for (int j = 0; j < 4; j++) { // 对于密码中的每一位做+1 -1的操作
-                    for (int o : new int[]{0, 1}) {
-                        char[] chars = node.toCharArray();
+                    for (int o : new int[]{-1, 1}) {
+                        char[] chars = cur.toCharArray();
                         chars[j] = change(chars[j], o);
                         String temp = new String(chars);
+
+                        if (temp.equals(target)) {
+                            return res;
+                        }
+
                         if (!dead.contains(temp) && !visited.contains(temp)) {
                             visited.add(temp);
                             queue.add(temp);
@@ -40,7 +43,6 @@ public class Solution {
                     }
                 }
             }
-            res++;
         }
         return -1;
     }
@@ -55,8 +57,8 @@ public class Solution {
 
     public static void main(String[] args) {
 
-        String[] deadends = new String[]{"8887", "8889", "8878", "8898", "8788", "8988", "7888", "9888"};
-        String target = "8888";
+        String[] deadends = new String[]{"0201","0101","0102","1212","2002"};
+        String target = "0202";
 
         Solution solution = new Solution();
         int res = solution.openLock(deadends, target);
