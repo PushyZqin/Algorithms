@@ -1,4 +1,4 @@
-package site.pushy.algorithms.simple;
+package site.pushy.algorithms.simple.problem;
 
 import java.util.ArrayList;
 import java.util.List;

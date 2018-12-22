@@ -1,4 +1,6 @@
-package site.pushy.algorithms.simple;
+package site.pushy.algorithms.simple.problem;
+
+import site.pushy.algorithms.simple.CalculateRunTime;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -17,9 +19,9 @@ public class LotusNumber {
     private static List<Integer> lotusList = new LinkedList<>();
 
     /**
-     * 我自己的求法，通过操作字符串拿到个、十、百位上的数
+     * 最初的求法，通过操作字符串拿到个、十、百位上的数，这样的运行时间比较长
      */
-    public static void solution0() {
+    public void solution0() {
 
         for (int i = 100; i < 999; i++) {  // 因为水仙花数必须是三位数，所以是从100~999
             String str = String.valueOf(i);
@@ -38,7 +40,7 @@ public class LotusNumber {
     /**
      * 比较合适的求法，通过取余数的方式得到个、十、百位上的数
      */
-    public static void solution1() {
+    public void solution1() {
         for (int i = 100; i < 999; i++) {
             int ones = i % 10;  // 个位
             int tens = (i / 10) % 10; // 十位
@@ -52,11 +54,9 @@ public class LotusNumber {
     }
 
     public static void main(String[] args) {
-        LotusNumber.solution1();
+        CalculateRunTime.run(LotusNumber.class);
 
         System.out.println("所有的水仙花数为： " + lotusList);
-
-
     }
 
 }
