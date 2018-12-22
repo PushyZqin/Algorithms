@@ -10,7 +10,7 @@ import java.util.Queue;
  * 用队列实现栈
  *
  * @author Pushy
- * @since 2018/11/14 12:34
+ * @since 2018/111/14 12:34
  */
 public class QueueToStack {
 

@@ -4,7 +4,7 @@ import java.util.LinkedList;
 
 /**
  * @author Pushy
- * @since 2018/11/10 9:51
+ * @since 2018/111/10 9:51
  */
 public class MyLinkedList {
 

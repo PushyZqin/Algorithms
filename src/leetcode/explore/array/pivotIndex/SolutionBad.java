@@ -4,7 +4,7 @@ package leetcode.explore.array.pivotIndex;
  * 采用最简单的方法，循环数组，算出循环的当前元素前面的所有元素和和后面所有元素的和
  *
  * @author Pushy
- * @since 2018/11/10 13:52
+ * @since 2018/111/10 13:52
  */
 public class SolutionBad {
 

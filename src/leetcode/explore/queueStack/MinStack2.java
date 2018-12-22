@@ -7,7 +7,7 @@ import java.util.Stack;
  * 该结构用JDK内置的Stack库实现，并用一个栈stack2来保存最小的元素
  *
  * @author Pushy
- * @since 2018/11/8 9:25
+ * @since 2018/111/8 9:25
  */
 public class MinStack2 {
 

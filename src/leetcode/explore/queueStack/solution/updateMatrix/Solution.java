@@ -2,12 +2,11 @@ package leetcode.explore.queueStack.solution.updateMatrix;
 
 import java.util.Arrays;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 
 /**
  * @author Pushy
- * @since 2018/11/17 21:24
+ * @since 2018/111/17 21:24
  */
 public class Solution {
 

@@ -2,7 +2,7 @@ package leetcode.explore.array.dominantIndex;
 
 /**
  * @author Pushy
- * @since 2018/11/10 14:23
+ * @since 2018/111/10 14:23
  */
 public class Solution {
 

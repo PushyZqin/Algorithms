@@ -2,7 +2,7 @@ package leetcode.explore.queueStack.solution.decodeString;
 
 /**
  * @author Pushy
- * @since 2018/11/17 21:09
+ * @since 2018/111/17 21:09
  */
 public class Solution {
 

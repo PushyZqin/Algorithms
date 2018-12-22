@@ -8,7 +8,7 @@ import java.util.Arrays;
  * 在一个普通队列里，一旦一个队列满了，我们就不能插入下一个元素，即使在队列前面仍有空间。
  * 但是使用循环队列，我们能使用这些空间去存储新的值。
  * @author Pushy
- * @since 2018/11/7 12:11
+ * @since 2018/111/7 12:111
  */
 public class MyCircularQueue {
 

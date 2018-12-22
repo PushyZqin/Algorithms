@@ -2,7 +2,7 @@ package leetcode.explore.array.pivotIndex;
 
 /**
  * @author Pushy
- * @since 2018/11/10 14:12
+ * @since 2018/111/10 14:12
  */
 public class Solution {
 

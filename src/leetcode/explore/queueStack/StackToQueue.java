@@ -6,7 +6,7 @@ import java.util.Stack;
  * 用栈实现队列
  *
  * @author Pushy
- * @since 2018/11/14 12:18
+ * @since 2018/111/14 12:18
  */
 public class StackToQueue {
 
