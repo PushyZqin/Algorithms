@@ -21,8 +21,7 @@ public class LotusNumber {
     /**
      * 最初的求法，通过操作字符串拿到个、十、百位上的数，这样的运行时间比较长
      */
-    public void solution0() {
-
+    public void solution() {
         for (int i = 100; i < 999; i++) {  // 因为水仙花数必须是三位数，所以是从100~999
             String str = String.valueOf(i);
             int sum = 0;
@@ -30,7 +29,6 @@ public class LotusNumber {
                 int number = Integer.parseInt(str.substring(j, j + 1));
                 sum += (number * number * number);
             }
-
             if (sum == i) {
                 lotusList.add(i);
             }
@@ -54,7 +52,7 @@ public class LotusNumber {
     }
 
     public static void main(String[] args) {
-        CalculateRunTime.run(LotusNumber.class);
+        CalculateRunTime.run(LotusNumber.class, "solution1");
 
         System.out.println("所有的水仙花数为： " + lotusList);
     }

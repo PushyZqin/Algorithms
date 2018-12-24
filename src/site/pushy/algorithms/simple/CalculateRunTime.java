@@ -18,13 +18,13 @@ public class CalculateRunTime {
 
     public static void run(Class<?> clazz, String methodName) {
         try {
-            long start = System.currentTimeMillis();
+            long start = System.nanoTime();
 
             Object object = clazz.newInstance();
             Method method = clazz.getMethod(methodName);
             method.invoke(object);
 
-            long end = System.currentTimeMillis();
+            long end = System.nanoTime();
             long time = end - start;
             System.out.println("共花费总时间为：" + time + "ms");
         } catch (Exception e) {
