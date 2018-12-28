@@ -15,37 +15,45 @@ import java.util.Arrays;
  */
 public class QuickSort1 {
 
-    public static void quickSort(int[] array, int left, int right) {
-        int dp;
+    /**
+     * 递归调用函数
+     *
+     * @param array
+     * @param low
+     * @param high
+     */
+    public static void quickSort(int[] array, int low, int high) {
+        int pos;
 
-        if (left < right) {
-            dp = partition(array, left, right);
-
-            System.out.println(dp);
-//            quickSort(array, left, dp - 1);
-//            quickSort(array, dp + 1, right);
+        if (low < high) {
+            /* 将数组分为两部分，交换完毕后记录支点的角标 */
+            pos = partition(array, low, high);
+            /* 然后再劈开两半进行递归调用 */
+            quickSort(array, low, pos - 1); // 递归排序左子数组
+            quickSort(array, pos + 1, high); // 递归排序右子数组
         }
     }
 
-    public static int partition(int n[], int left, int right) {
-        int pivot = n[left];   // 枢纽记录
+    /**
+     * 将数组划分，比支点小的划分到左端，比支点大的划分到右端
+     * high-- 是为了找到一个比支点小的数
+     * low++ 是为了找到一个比支点大的数
+     */
+    public static int partition(int array[], int low, int high) {
+        int pivot = array[low];   // 将第一个元素作为支点
 
-        while (left < right) {
-            while (left < right && n[right] >= pivot) {
-                right--;
+        while (low < high) {
+            while (low < high && array[high] >= pivot) {  // 直到寻找到比支点小的数
+                high--;
             }
-            if (left < right) {
-                n[left++] = n[right];
+            array[low] = array[high];  // 交换比支点小的记录到左端
+            while (low < high && array[low] <= pivot) {  // 直到寻找到比支点大的数
+                low++;
             }
-            while (left < right && n[left] <= pivot) {
-                left++;
-            }
-            if (left < right) {
-                n[right--] = n[left];
-            }
+            array[high] = array[low];  // 交换比支点大的记录到右端
         }
-        n[left] = pivot;
-        return left;
+        array[low] = pivot;
+        return low;   // 返回支点的角标
     }
 
     public static void main(String[] args) {

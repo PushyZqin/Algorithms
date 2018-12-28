@@ -1,4 +1,4 @@
-package site.pushy.algorithms.simple.problem;
+package site.pushy.algorithms.simple.math;
 
 /**
  * 题目：猴子摘下了n个桃子，当天吃掉一半多一个，第二天也是吃掉剩下桃子的一半多一个，
@@ -35,6 +35,7 @@ public class MonkeyEatPeach {
     public static int solution1(int day) {
         int x = 1;  // 最后一天的桃子个数
         for (int i = 1; i <= (day - 1); i++) {
+            /* 一半多一个的逆向思维即： 两倍加1 */
             x = (x + 1) * 2;
         }
         return x;

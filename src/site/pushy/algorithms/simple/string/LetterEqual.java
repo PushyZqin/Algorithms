@@ -1,4 +1,4 @@
-package site.pushy.algorithms.simple.problem;
+package site.pushy.algorithms.simple.string;
 
 import java.util.HashSet;
 import java.util.Set;

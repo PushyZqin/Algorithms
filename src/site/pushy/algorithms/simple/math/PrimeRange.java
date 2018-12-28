@@ -1,4 +1,4 @@
-package site.pushy.algorithms.simple.problem;
+package site.pushy.algorithms.simple.math;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,11 +8,10 @@ import java.util.List;
  */
 public class PrimeRange {
 
-    public static void main(String[] args) {
+    public static List<Integer> solution(int n) {
+        List<Integer> res = new ArrayList<>();
 
-        List<Integer> primeList = new ArrayList<>();
-
-        for (int i = 2; i < 200; i++) {
+        for (int i = 2; i < n; i++) {
             boolean flag = true;
             for (int j = 2; j < i; j++) {
                 /* 如果能被整除，则表明此数不是素数 */
@@ -22,10 +21,16 @@ public class PrimeRange {
                 }
             }
             if (flag) {
-                primeList.add(i);
+                res.add(i);
             }
         }
+        return res;
+    }
 
-        System.out.println("1~200 内所有的素数有： " + primeList);
+    public static void main(String[] args) {
+        int n = 200;
+
+        List<Integer> res = PrimeRange.solution(n);
+        System.out.println("1~" + n + "内所有的素数有： " + res);
     }
 }

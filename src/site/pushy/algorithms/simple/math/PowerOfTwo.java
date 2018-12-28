@@ -1,4 +1,4 @@
-package site.pushy.algorithms.simple.problem;
+package site.pushy.algorithms.simple.math;
 
 /**
  * 判断一个数是不是2的某次方
@@ -6,7 +6,7 @@ package site.pushy.algorithms.simple.problem;
  * @author Pushy
  * @since 2018/12/23 21:50
  */
-public class IsPowerOfTwo {
+public class PowerOfTwo {
 
     public static boolean solution(int num) {
         if (num == 0) {
@@ -32,7 +32,7 @@ public class IsPowerOfTwo {
     }
 
     public static void main(String[] args) {
-        boolean result = IsPowerOfTwo.solution(8);
+        boolean result = PowerOfTwo.solution(8);
 
         System.out.println(result);
     }

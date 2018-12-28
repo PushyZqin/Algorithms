@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.explore.queueStack.sample;
+package site.pushy.algorithms.leetcode.explore.queueStack.example;
 
 import java.util.LinkedList;
 import java.util.Queue;
