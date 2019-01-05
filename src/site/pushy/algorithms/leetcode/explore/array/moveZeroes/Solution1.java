@@ -32,14 +32,14 @@ public class Solution1 {
     public void moveZeroes1(int[] nums) {
         int zeroNum = 0;
 
+        /* 将不为零的元素移动到数组的最前边 */
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] != 0) {
                 nums[zeroNum] = nums[i];
                 zeroNum++;
             }
         }
-        System.out.println(zeroNum);
-
+        
         /* 填充零元素 */
         while (zeroNum < nums.length) {
             nums[zeroNum] = 0;
