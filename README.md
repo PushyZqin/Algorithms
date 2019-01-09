@@ -4,7 +4,7 @@
 
 - [队列和栈](src/site/pushy/algorithms/datastructure/queueStack)
 - [链表](src/site/pushy/algorithms/datastructure/linkedList)
-- [数](src/site/pushy/algorithms/datastructure/tree)
+- [树](src/site/pushy/algorithms/datastructure/tree)
 
 ## 排序
 

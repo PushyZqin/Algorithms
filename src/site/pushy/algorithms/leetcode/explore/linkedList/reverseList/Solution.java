@@ -10,19 +10,19 @@ import site.pushy.algorithms.leetcode.explore.linkedList.ListUtil;
 public class Solution {
 
     public ListNode reverseList(ListNode head) {
-        if (head == null) return null;
+        /* 如果该链表没有头结点或者只有一个头结点，则原样返回head  */
+        if (head == null || head.next == null) return head;
 
-        ListNode next = null;
+        ListNode next = null;   // 临时结点，用力保存当前结点的下一结点
         ListNode pre = null;
 
         while (head != null) {
-            next = head.next;
-            head.next = pre;
-            pre = head;
+            next = head.next;  // 保存后继节点
+            head.next = pre;   // 让当前的头结点上一个头结点
+            pre = head;        // 当前头结点赋值给pre，将在下一个头结点的后继指向该节点
             head = next;
         }
-        return pre;
-
+        return pre;  // 返回pre，即反转链表的头结点
     }
 
     public static void main(String[] args) {

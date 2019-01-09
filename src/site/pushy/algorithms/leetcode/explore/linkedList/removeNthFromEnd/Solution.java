@@ -1,6 +1,7 @@
 package site.pushy.algorithms.leetcode.explore.linkedList.removeNthFromEnd;
 
 import site.pushy.algorithms.leetcode.explore.linkedList.ListNode;
+import site.pushy.algorithms.leetcode.explore.linkedList.ListUtil;
 
 /**
  * @author Pushy
@@ -18,15 +19,16 @@ public class Solution {
         for (int i = 0; i < n; i++) {
             fast = fast.next;
         }
+        /* 如果删除的是头结点，直接返回头结点的后继 */
+        if (fast == null) return head.next;
 
-        if (fast == null) return head.next; // 如果删除的是头结点
-
-        /* 让快指针和慢指针以相同的单位移动，当快指针指向链表末尾时，慢指针指向的即待删除的节点 */
+        /* 让快指针和慢指针以相同的单位移动，当快指针指向链表末尾时，慢指针则为即待删除的结点的前驱 */
         while (fast.next != null) {
             fast = fast.next;
             slow = slow.next;
         }
-        slow.next = slow.next.next;
+
+        slow.next = slow.next.next;  // 删除结点
 
         return head;
     }
@@ -43,7 +45,7 @@ public class Solution {
 
         Solution solution = new Solution();
         ListNode res = solution.removeNthFromEnd(head, 2);
-        System.out.println("res：" + res);
+        System.out.println("res：" + ListUtil.toString(res));
     }
 
 }
