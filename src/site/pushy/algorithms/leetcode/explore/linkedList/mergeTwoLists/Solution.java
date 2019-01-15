@@ -9,7 +9,11 @@ import site.pushy.algorithms.leetcode.explore.linkedList.ListUtil;
  */
 public class Solution {
 
+    /**
+     * 同时不断遍历两个链表，取出小的追加到新的头结点，直至两者其中一个为空
+     */
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+        /* 创建哑结点，这样就不用判断新链表的头结点是l1的头结点还是l2的头结点了 */
         ListNode dummy = new ListNode(0);
         ListNode cur = dummy;
 
@@ -21,11 +25,12 @@ public class Solution {
                 cur.next = l2;
                 l2 = l2.next;
             }
-
             cur = cur.next;
         }
 
-        cur.next = l1 != null ? l1 : l2;
+        /* 判断哪个链表先遍历完毕，就将另外一个链表拼接起来就行 */
+        if (l1 == null) cur.next = l2;   // 代表l1先遍历完毕了
+        if (l2 == null) cur.next = l1;   // 代表l2先遍历完毕了
 
         return dummy.next;
     }
