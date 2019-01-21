@@ -14,7 +14,7 @@ public class Solution {
 //
 //        /* 通过HashMap用来存储每个字符在单词中出现的次数 */
 //        for (char ch : chars) {
-//            int value = hashMap.get(ch) == null ? 1 : hashMap.get(ch) + 1;
+//            int value = hashMap.getOrDefault(ch, 0) + 1;
 //            hashMap.put(ch, value);
 //        }
 //
@@ -31,13 +31,11 @@ public class Solution {
     public int firstUniqChar(String s) {
         if (s == null || s.length() == 0) return -1;
 
-        int res = -1;
+        int res = Integer.MAX_VALUE;
         for (char i = 'a'; i <= 'z'; i++) {
             int index = s.indexOf(i);
             if (index != -1 && index == s.lastIndexOf(i)) {
-                if (res == -1 || res > index) {  // 取最小值
-                    res = index;
-                }
+                res = Math.min(res, index);
             }
         }
         return res;
