@@ -15,11 +15,11 @@ public class BinaryTree {
 
     static class Node {
 
-        public Integer data;
+        public Object data;
         public Node left;
         public Node right;
 
-        public Node(Integer data) {
+        public Node(Object data) {
             this.data = data;
         }
     }
@@ -28,27 +28,43 @@ public class BinaryTree {
      * 测试创建二叉树
      */
     public static Node createTree() {
-        Node root = new Node(1);
-        Node headLeft = new Node(2);  // 创建左节点
-        Node headRight = new Node(3); // 创建右节点
+        Node root = new Node("A");
+        Node BNode = new Node("B");  // 创建左节点
+        Node CNode = new Node("C"); // 创建右节点
+        Node DNode = new Node("D");
+        Node ENode = new Node("E");
+        Node FNode = new Node("F");
+        Node GNode = new Node("G");
+        Node HNode = new Node("H");
+        Node INode = new Node("I");
 
-        root.left = headLeft;
-        root.right = headRight;
+        DNode.left = GNode; DNode.right = HNode;
+        BNode.left = DNode;
 
+        ENode.right = INode;
+        CNode.left = ENode; CNode.right = FNode;
+
+        root.left = BNode; root.right = CNode;
         return root;
     }
 
     /**
-     * 递归创建二叉树结构
+     * 先序顺序递归创建二叉树结构
      */
-    public static void initTree(Node node) {
+    public static Node preOrderCreate(Node node) {
         Scanner scanner = new Scanner(System.in);
-        int data = scanner.nextInt();
+        int value = scanner.nextInt();
 
-        if (data == -1) {
-            return;
+        if (value != 0) {
+            node = new Node(value);
+            System.out.println("请输入左子结点的值：");
+            node.left = preOrderCreate(node.left);
+            System.out.println("请输入右子结点的值：");
+            node.right = preOrderCreate(node.right);
+        } else {
+            node = null;
         }
-        //
+        return node;
     }
 
     /**
@@ -58,7 +74,7 @@ public class BinaryTree {
         if (node == null) {
             return;
         }
-        System.out.print(node.data);
+        System.out.print(node.data + " ");
         preOrderTraverse(node.left);
         preOrderTraverse(node.right);
     }
@@ -70,8 +86,8 @@ public class BinaryTree {
         if (node == null) {
             return;
         }
-        System.out.print(node.data);
         midOrderTraverse(node.left);
+        System.out.print(node.data + " ");
         midOrderTraverse(node.right);
     }
 
@@ -84,15 +100,13 @@ public class BinaryTree {
         }
         postOrderTraverse(node.left);
         postOrderTraverse(node.right);
-        System.out.print(node.data);
+        System.out.print(node.data + " ");
     }
 
     /**
-     * 深度优先遍历，相当于先序遍历
-     * 使用栈非递归实现二叉树的遍历
+     * 深度优先遍历，相当于先序遍历。使用栈非递归实现二叉树的遍历
      */
     public static void DFS(Node root) {
-
         if (root == null) {
             return;
         }
@@ -102,7 +116,7 @@ public class BinaryTree {
         while (!nodes.isEmpty()) {
             // 取出栈顶元素，判断是否有子节点
             Node temp = nodes.pop();
-            System.out.print(temp.data);
+            System.out.print(temp.data + " ");
 
             if (temp.right != null) {
                 nodes.push(temp.right);
@@ -115,8 +129,7 @@ public class BinaryTree {
     }
 
     /**
-     * 广度优先遍历
-     * 使用队列非递归的方式实现二叉树的遍历
+     * 广度优先遍历：使用队列非递归的方式实现二叉树的遍历
      */
     public static void BFS(Node root) {
         if (root == null) {
@@ -127,7 +140,7 @@ public class BinaryTree {
 
         while (!nodes.isEmpty()) {
             Node temp = nodes.remove();
-            System.out.print(temp.data);
+            System.out.print(temp.data + " ");
             if (temp.left != null) {
                 nodes.add(temp.left);
             }
@@ -139,6 +152,7 @@ public class BinaryTree {
 
     public static void main(String[] args) {
         Node root = BinaryTree.createTree();
+//        Node root = BinaryTree.preOrderCreate(null);
 
         System.out.println("先序遍历：");
         BinaryTree.preOrderTraverse(root);
