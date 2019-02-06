@@ -12,21 +12,18 @@ import java.util.*;
  */
 public class Solution {
 
-    private List<Integer> list;
-
     public List<Integer> preorderTraversal(TreeNode root) {
-        list = new ArrayList<>();
-        traversal(root);
-        return list;
+        List<Integer> res = new ArrayList<>();
+        if (root == null) return res;
+        return traversal(root, res);
     }
 
-    private TreeNode traversal(TreeNode node) {
-        if (node == null) return null;
-
-        list.add(node.val);
-        traversal(node.left);
-        traversal(node.right);
-        return node;
+    public List<Integer> traversal(TreeNode node, List<Integer> res) {
+        if (node == null) return res;
+        res.add(node.val);
+        traversal(node.left, res);
+        traversal(node.right, res);
+        return res;
     }
 
     public static void main(String[] args) {

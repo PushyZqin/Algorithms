@@ -23,7 +23,7 @@ public class Solution {
             int size = queue.size();
             List<Integer> list = new ArrayList<>();
 
-            while (size > 0) {  // 遍历每层的结点
+            while (size-- > 0) {  // 遍历每层的结点
                 TreeNode node = queue.remove();
                 list.add(node.val);
 
@@ -31,7 +31,6 @@ public class Solution {
                     queue.offer(node.left);  // 将左子节点放入队列中
                 if (node.right != null)
                     queue.offer(node.right); // 将右子节点放入队列中
-                size--;
             }
             res.add(list);
         }

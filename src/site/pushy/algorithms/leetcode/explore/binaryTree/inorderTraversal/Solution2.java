@@ -25,7 +25,6 @@ public class Solution2 {
                 stack.push(cur);
                 cur = cur.left;
             }
-
             // 出栈，访问这些子结点的右结点值
             cur = stack.pop();
             res.add(cur.val);

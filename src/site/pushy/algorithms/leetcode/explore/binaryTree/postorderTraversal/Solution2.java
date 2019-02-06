@@ -17,9 +17,20 @@ public class Solution2 {
     public List<Integer> postorderTraversal(TreeNode root) {
         List<Integer> res = new ArrayList<>();
         Stack<TreeNode> stack = new Stack<>();
+        Stack<TreeNode> ansStack = new Stack<>();
 
-        // Todo 非递归实现二叉树的后序遍历
+        if (root == null) return res;
+        stack.push(root);
+        while (!stack.isEmpty()) {
+            root = stack.pop();
+            ansStack.push(root);
+            if (root.left != null) stack.push(root.left);
+            if (root.right != null) stack.push(root.right);
+        }
 
+        while (!ansStack.isEmpty()) {
+            res.add(ansStack.pop().val);
+        }
         return res;
     }
 

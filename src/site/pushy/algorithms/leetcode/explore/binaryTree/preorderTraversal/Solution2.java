@@ -23,12 +23,10 @@ public class Solution2 {
 
         while (!stack.isEmpty()) {
             TreeNode node = stack.pop();
-            if (node == null)
-                continue;
-
             res.add(node.val);
-            stack.push(node.left);
-            stack.push(node.right);
+
+            if (node.right != null) stack.push(node.right);
+            if (node.left != null) stack.push(node.left);
         }
         return res;
     }
