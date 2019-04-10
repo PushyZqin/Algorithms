@@ -1,6 +1,4 @@
-package site.pushy.algorithms.leetcode.explore.string.findMaxConsecutiveOnes;
-
-import java.util.*;
+package site.pushy.algorithms.leetcode.explore.array.findMaxConsecutiveOnes;
 
 /**
  * @author Pushy

@@ -13,27 +13,29 @@ import java.util.Arrays;
  */
 public class InsertSort {
 
-    public static int[] basic(int[] array) {
+    public static void insertSort(int[] arr) {
         int temp;
 
         /* 控制需要排序的趟数，从1开始是因为把第0位看成是有效数据 */
-        for (int i = 1; i < array.length; i++) {
-            temp = array[i];
-            while (i >= 1 && array[i - 1] > temp) {
-                array[i] = array[i - 1];  // 往后退一个位置，让当前数据与之前前位进行比较
-                i--;  // 不断往前，直到退出循环
+        for (int i = 1; i < arr.length; i++) {
+            temp = arr[i];
+
+            int j = i;
+            // 从已经排序的序列最右边开始比较，找到比其小的数
+            while (j > 0 && temp < arr[j - 1]) {
+                arr[j] = arr[j - 1];  // 往后移动一个位置
+                j--;                  // 不断往前，直到退出循环
             }
             /* 退出了循环代表找到了合适的位置，将当前数据插入合适的位置中 */
-            array[i] = temp;
+            if (j != i) arr[j] = temp;
         }
-        return array;
     }
 
     public static void main(String[] args) {
-        int[] array = {2, 5, 1, 3, 4};
+        int[] arr = {2, 5, 1, 3, 4};
 
-        int[] result = InsertSort.basic(array);
-        System.out.println(Arrays.toString(result));
+        InsertSort.insertSort(arr);
+        System.out.println(Arrays.toString(arr));
     }
 
 }

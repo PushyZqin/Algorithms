@@ -1,3 +1,7 @@
+# 27. 移除元素
+
+## Question
+
 给定一个数组 nums 和一个值 val，你需要原地移除所有数值等于 val 的元素，返回移除后数组的新长度。
 
 不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。
@@ -42,5 +46,40 @@ int len = removeElement(nums, val);
 // 根据你的函数返回的长度, 它会打印出数组中该长度范围内的所有元素。
 for (int i = 0; i < len; i++) {
     print(nums[i]);
+}
+```
+
+## Solution
+
+如果没有空间复杂度的限制（题目要求使用原地算法），我们可以初始化一个新的数组来存储答案。如果元素不等于目标值，则将元素添加到新的数组中。
+
+然后再将新的数组值依次覆盖到`nums`数组中，并且`j`即移除后数组的新长度：
+
+```java
+public int removeElement(int[] nums, int val) {
+    int[] arr = new int[nums.length];
+    int j = 0;
+
+    for (int num : nums) {
+        if (num != val) arr[j++] = num;
+    }
+    for (int i = 0; i <= j; i++) {
+        nums[i] = arr[i];
+    }
+    return j;
+}
+```
+
+但是，仔细想想，为什么我要新开辟一个数组来存储移除过后的值呢？
+
+我们可以用一个慢指针指向原数组中**下一次添加位置**，快指针用于迭代，指向**下一个判断的元素**。如果快指针指向的元素不符合目标值，则与慢指针指向的元素交换即可。同样，快指针的值就是移除后数组的新长度：
+
+```java
+public int removeElement(int[] nums, int val) {
+    int p = 0;
+    for (int num : nums) {
+        if (num != val) nums[p++] = num;
+    }
+    return p;
 }
 ```

@@ -14,34 +14,49 @@ import java.util.Arrays;
  */
 public class SelectionSort {
 
-    public static int[] basic(int[] array) {
-        int pos;  // 记录当前趟数的最大值的角标
+    public static void selectionMinSort(int[] arr) {
         int temp;
+        int min;  // 记录每趟最小值下标
 
-        for (int i = 0; i < array.length; i++) {  // 控制需要排序的趟数
-            pos = 0;
-            for (int j = 0; j < array.length - i; j++) {  // 控制遍历数组的个数并得到最大数的角标
-                if (array[j] > array[pos]) {
-                    pos = j;
-                }
+        for (int i = 0; i < arr.length - 1; i++) {
+            min = i;
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[j] < arr[min]) min = j;  // 记录目前找到的最小值下标
+            }
+            // 将该趟找到的最小值和i位置所在的值进行交换
+            if (i != min) {
+                temp = arr[i];
+                arr[i] = arr[min];
+                arr[min] = temp;
+            }
+        }
+    }
+
+    public static void selectionMaxSort(int[] arr) {
+        int temp;
+        int max;  // 记录当前趟数的最大值的角标
+
+        for (int i = 0; i < arr.length; i++) {  // 控制需要排序的趟数
+            max = 0;
+            for (int j = 0; j < arr.length - i; j++) {  // 控制遍历数组的个数并得到最大数的角标
+                if (arr[j] > arr[max]) max = j;
             }
             // 交换值
-            temp = array[pos];  // 拿到该趟的最大值
+            temp = arr[max];  // 拿到该趟的最大值
             /*
                 将该趟的最大值放在已经排序的元素的最前面，例如第一趟，将最大值放在最后一位；
                 第二趟，放在倒数第二位
              */
-            array[pos] = array[array.length - 1 - i];
-            array[array.length - 1 - i] = temp;
+            arr[max] = arr[arr.length - 1 - i];
+            arr[arr.length - 1 - i] = temp;
         }
-        return array;
     }
 
     public static void main(String[] args) {
         int[] array = {2, 5, 1, 3, 4};
 
-        int[] result = SelectionSort.basic(array);
-        System.out.println(Arrays.toString(result));
+        SelectionSort.selectionMinSort(array);
+        System.out.println(Arrays.toString(array));
     }
 
 }

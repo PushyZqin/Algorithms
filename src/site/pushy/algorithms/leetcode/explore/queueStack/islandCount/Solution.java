@@ -6,7 +6,7 @@ package site.pushy.algorithms.leetcode.explore.queueStack.islandCount;
  * https://leetcode-cn.com/explore/learn/card/queue-stack/217/queue-and-bfs/872/
  *
  * @author Pushy
- * @since 2018/111/8 8:44
+ * @since 2018/11/8 8:44
  */
 public class Solution {
 
@@ -22,7 +22,7 @@ public class Solution {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
                 if (grid[i][j] == '1' && !visited[i][j]) {
-                    numIslandsDFS(grid, visited, i, j);
+                    numIslandsBFS(grid, visited, i, j);
                     count++;
                 }
             }
@@ -31,17 +31,20 @@ public class Solution {
         return count;
     }
 
-    void numIslandsDFS(char[][] grid, boolean[][] visited, int x, int y) {
-        if (x < 0 || x >= grid.length) return;  // 不合法的坐标值
-        if (y < 0 || y >= grid[0].length) return; // 不合法的坐标值
-        if (grid[x][y] != '1' || visited[x][y]) return;  // 直到找到的值不为1为止
+    void numIslandsBFS(char[][] grid, boolean[][] visited, int x, int y) {
+        // 排除不合法的坐标值
+        if (x < 0 || x >= grid.length) return;
+        if (y < 0 || y >= grid[0].length) return;
+        // 查找的岛屿筛选条件，即要求周围的都是 1（陆地）
+        if (grid[x][y] != '1' || visited[x][y]) return;
 
         visited[x][y] = true;  // 标记为访问过
 
-        numIslandsDFS(grid, visited, x - 1, y);  // 左
-        numIslandsDFS(grid, visited, x + 1, y);  // 右
-        numIslandsDFS(grid, visited, x, y - 1);  // 下
-        numIslandsDFS(grid, visited, x, y + 1);  // 上
+        // 递归查找该位置的上下左右，如果上下左右都为1，则说明该 (x, y) 位置为岛屿
+        numIslandsBFS(grid, visited, x - 1, y);  // 左
+        numIslandsBFS(grid, visited, x + 1, y);  // 右
+        numIslandsBFS(grid, visited, x, y - 1);  // 下
+        numIslandsBFS(grid, visited, x, y + 1);  // 上
     }
 
     public static void main(String[] args) {

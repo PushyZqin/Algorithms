@@ -41,7 +41,7 @@ public class Solution {
         int sum = 22;
 
         Solution solution = new Solution();
-//        Solution2 solution = new Solution2();
+//        Solution solution = new Solution();
         boolean res = solution.hasPathSum(root, sum);
         System.out.println("res：" + res);
     }

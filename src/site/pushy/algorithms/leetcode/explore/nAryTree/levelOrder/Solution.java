@@ -40,7 +40,7 @@ public class Solution {
         root.children = secondLevel;
 
         Solution solution = new Solution();
-//        Solution2 solution = new Solution2();
+//        Solution solution = new Solution();
         List<List<Integer>> res = solution.levelOrder(root);
         System.out.println("res：" + res);
     }

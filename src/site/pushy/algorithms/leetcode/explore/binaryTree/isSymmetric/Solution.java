@@ -41,7 +41,7 @@ public class Solution {
         root.right = right;
 
         Solution solution = new Solution();
-//        Solution2 solution = new Solution2();
+//        Solution solution = new Solution();
         boolean res = solution.isSymmetric(root);
         System.out.println("res：" + res);
     }
