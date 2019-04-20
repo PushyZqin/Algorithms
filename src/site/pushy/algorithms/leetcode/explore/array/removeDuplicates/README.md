@@ -1,4 +1,6 @@
-## 删除排序数组中的重复项
+# 26. 删除排序数组中的重复项
+
+## Question
 
 给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。
 
@@ -40,3 +42,26 @@ for (int i = 0; i < len; i++) {
     print(nums[i]);
 }
 ```
+
+## Solution
+
+该题与 [27. 移除元素](https://github.com/pushyzheng/Algorithms/tree/master/src/site/pushy/algorithms/leetcode/explore/array/removeElement) 类似，都运用了快慢双指针来解决。
+
+同样，我们可以用慢指针来**指向下一个不重复元素的插入位置**，快指针用于迭代，检测慢指针指向的元素是否和当前遍历到的元素重复。如果重复则插入到`left`所指的位置即可：
+
+
+```java
+public static int removeDuplicates(int[] nums) {
+    if(nums == null || nums.length == 0) return 0;
+
+    int left = 0;  // slow point
+    for (int i = 0; i < nums.length; i++) { // fast point
+        if (nums[left] != nums[i]) {
+            nums[++left] = nums[i];
+        }
+    }
+    return left + 1;
+}
+```
+
+最后，慢指针的值 + 1 即元素剩余不重复元素的值。

@@ -1,4 +1,9 @@
-# 561. Array Partition I
+---
+export_on_save:
+  html: true
+---
+
+# 561. 数组拆分 I
 
 ## Question
 

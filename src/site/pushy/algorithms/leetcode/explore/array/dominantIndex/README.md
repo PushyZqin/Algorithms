@@ -1,4 +1,11 @@
-## 747. Largest Number At Least Twice of Others
+---
+export_on_save:
+  html: true
+---
+
+# 747. 至少是其他数字两倍的最大数
+
+## Question
 
 在一个给定的数组nums中，总是存在一个最大元素 。
 

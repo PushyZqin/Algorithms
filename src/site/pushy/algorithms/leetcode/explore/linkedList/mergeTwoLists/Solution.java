@@ -36,20 +36,11 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        ListNode head1 = new ListNode(1);
-        ListNode node1 = new ListNode(2);
-        ListNode node2 = new ListNode(4);
-        head1.next = node1;
-        node1.next = node2;
-
-        ListNode head2 = new ListNode(1);
-        ListNode node3 = new ListNode(3);
-        ListNode node4 = new ListNode(4);
-        head2.next = node3;
-        node3.next = node4;
+        ListNode l1 = ListUtil.getListByArray(new int[]{1, 2, 4});
+        ListNode l2 = ListUtil.getListByArray(new int[]{1, 3, 4});
 
         Solution solution = new Solution();
-        ListNode res = solution.mergeTwoLists(head1, head2);
+        ListNode res = solution.mergeTwoLists(l1, l2);
         System.out.println("res：" + ListUtil.toString(res));
     }
 

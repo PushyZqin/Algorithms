@@ -13,7 +13,7 @@ public class Solution {
         /* 如果该链表没有头结点或者只有一个头结点，则原样返回head  */
         if (head == null || head.next == null) return head;
 
-        ListNode next = null;   // 临时结点，用力保存当前结点的下一结点
+        ListNode next;   // 临时结点，用力保存当前结点的下一结点
         ListNode pre = null;
 
         while (head != null) {

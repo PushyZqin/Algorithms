@@ -1,6 +1,7 @@
 package site.pushy.algorithms.leetcode.explore.linkedList.isPalindrome;
 
 import site.pushy.algorithms.leetcode.explore.linkedList.ListNode;
+import site.pushy.algorithms.leetcode.explore.linkedList.ListUtil;
 
 import java.util.*;
 
@@ -39,14 +40,31 @@ public class Solution {
         return true;
     }
 
+    public boolean isPalindrome2(ListNode head) {
+        if (head == null || head.next == null) return true;
+        if (head.next.next == null) return head.val == head.next.val;
+
+        ListNode slow = head, fast = head.next;
+
+        while (fast.next != null) {
+            if (slow.val == fast.next.val) {
+                if (fast.next.next == null) return false;
+
+                fast.next = null;
+                slow = slow.next;
+                fast = slow.next;
+                if (fast == null || slow.val == fast.val) {
+                    return true;
+                }
+            } else {
+                fast = fast.next;
+            }
+        }
+        return false;
+    }
+
     public static void main(String[] args) {
-        ListNode head = new ListNode(1);
-        ListNode node1 = new ListNode(2);
-        ListNode node2 = new ListNode(2);
-        ListNode node3 = new ListNode(1);
-        head.next = node1;
-        node1.next = node2;
-        node2.next = node3;
+        ListNode head = ListUtil.getListByArray(new int[]{1, 2, 2, 1});
 
         Solution solution = new Solution();
         boolean res = solution.isPalindrome(head);

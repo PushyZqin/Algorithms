@@ -11,33 +11,15 @@ import java.util.Set;
  */
 public class Solution {
 
-//    public ListNode detectCycle(ListNode head) {
-//        Set<ListNode> nodes = new HashSet<>();
-//
-//        while (head != null) {
-//            if (nodes.contains(head.next)) {
-//                return head.next;
-//            } else {
-//                nodes.add(head);
-//            }
-//            head = head.next;
-//        }
-//
-//        return null;
-//    }
-
     /**
      * 通过双指针来实现，算法来自LeetCode提交记录
      * 思路可以看 https://blog.csdn.net/Heitao5200/article/details/84994161
-     *
      * @return
      */
     public ListNode detectCycle(ListNode head) {
         if (head == null || head.next == null) return null;
 
-        ListNode fast = head;  // 快指针
-        ListNode slow = head;  // 慢指针
-
+        ListNode slow = head, fast = head;
         while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;

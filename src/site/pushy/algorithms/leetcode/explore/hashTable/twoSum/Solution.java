@@ -8,24 +8,11 @@ import java.util.*;
  */
 public class Solution {
 
-    private void sort(int[] nums) {
-        int temp;
-        for (int i = 0; i < nums.length; i++) { // 排序的趟数
-            for (int j = 0; j < nums.length - i - 1; j++) {  // 当前趟数需要比较的次数
-                if (nums[j] > nums[j + 1]) {
-                    temp = nums[j];
-                    nums[j] = nums[j + 1];
-                    nums[j + 1] = temp;
-                }
-            }
-        }
-    }
-
     public int[] twoSum(int[] nums, int target) {
         List<Integer> list = new LinkedList<>();
         for (int num : nums) list.add(num);
 
-        sort(nums);
+        Arrays.sort(nums);
 
         int head = 0;
         int rail = nums.length - 1;

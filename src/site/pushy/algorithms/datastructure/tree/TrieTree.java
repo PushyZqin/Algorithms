@@ -8,7 +8,7 @@ import java.util.*;
  */
 public class TrieTree implements TrieTreeApi {
 
-    class Node {
+    public class Node {
         char v;           // 当前节点的值
         boolean isEnd;    // 标识此节点是否为某个单词的结束节点
         Node[] children;  // 大小为26的数组来存储其子节点，并可以使用 v - 'a' 作为索引来查找数组中相应的子节点

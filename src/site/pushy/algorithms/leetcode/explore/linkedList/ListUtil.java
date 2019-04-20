@@ -23,4 +23,15 @@ public class ListUtil {
         return sb.toString();
     }
 
+    public static ListNode getListByArray(int[] arr) {
+        ListNode root = new ListNode(arr[0]);
+        ListNode cur = root;
+
+        for (int i = 1; i < arr.length; i++) {
+            cur.next = new ListNode(arr[i]);
+            cur = cur.next;
+        }
+        return root;
+    }
+
 }

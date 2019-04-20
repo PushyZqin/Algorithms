@@ -1,4 +1,6 @@
-## 旋转数组
+# 189. 旋转数组
+
+## Question
 
 给定一个数组，将数组中的元素向右移动 k 个位置，其中 k 是非负数。
 
@@ -27,3 +29,22 @@
 
 - 尽可能想出更多的解决方案，至少有三种不同的方法可以解决这个问题。
 - 要求使用空间复杂度为 O(1) 的原地算法。
+
+## Solution
+
+```java
+public void rotate(int[] nums, int k) {
+    if (k == 0) return;
+    k %= nums.length;
+
+    for (int i = 0; i < k; i++) {
+        int temp = nums[nums.length - 1];
+        // 从后往前向右移动一位
+        for (int j = nums.length - 1; j > 0; j--) {
+            nums[j] = nums[j - 1];
+        }
+        // 将之前的最后一位放到表头
+        nums[0] = temp;
+    }
+}
+```

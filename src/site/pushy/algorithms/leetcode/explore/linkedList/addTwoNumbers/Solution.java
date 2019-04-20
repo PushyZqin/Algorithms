@@ -1,6 +1,7 @@
 package site.pushy.algorithms.leetcode.explore.linkedList.addTwoNumbers;
 
 import site.pushy.algorithms.leetcode.explore.linkedList.ListNode;
+import site.pushy.algorithms.leetcode.explore.linkedList.ListUtil;
 
 /**
  * @author Pushy
@@ -9,27 +10,31 @@ import site.pushy.algorithms.leetcode.explore.linkedList.ListNode;
 public class Solution {
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        ListNode dummy = new ListNode(-1);
+        ListNode p = l1, q = l2, cur = dummy;
+        int carry = 0;
 
-
-        return null;
+        while (p != null || q != null) {
+            int x = (p != null) ? p.val : 0;
+            int y = (q != null) ? q.val : 0;
+            int sum = carry + x + y;
+            carry = sum / 10;
+            cur.next = new ListNode(sum % 10);
+            cur = cur.next;
+            if (p != null) p = p.next;
+            if (q != null) q = q.next;
+        }
+        if (carry > 0) cur.next = new ListNode(carry);
+        return dummy.next;
     }
 
     public static void main(String[] args) {
-        ListNode head1 = new ListNode(2);
-        ListNode node1 = new ListNode(4);
-        ListNode node2 = new ListNode(3);
-        head1.next = node1;
-        node1.next = node2;
-
-        ListNode head2 = new ListNode(5);
-        ListNode node3 = new ListNode(6);
-        ListNode node4 = new ListNode(4);
-        head2.next = node3;
-        node3.next = node4;
+        ListNode head1 = ListUtil.getListByArray(new int[]{1, 3, 3});
+        ListNode head2 = ListUtil.getListByArray(new int[]{2, 4, 7});
 
         Solution solution = new Solution();
         ListNode res = solution.addTwoNumbers(head1, head2);
-        System.out.println("res：" + res);
+        System.out.println("res：" + ListUtil.toString(res));
     }
 
 }

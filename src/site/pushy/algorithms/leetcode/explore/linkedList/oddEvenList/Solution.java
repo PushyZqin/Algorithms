@@ -16,10 +16,8 @@ public class Solution {
     public ListNode oddEvenList(ListNode head) {
         if (head == null || head.next == null) return head;
 
-        ListNode odd = head;
-        ListNode even = head.next;
+        ListNode odd = head, even = head.next;
         ListNode evenHead = even;
-
         while (even != null && even.next != null) {
             odd.next = even.next;
             odd = odd.next;
@@ -27,22 +25,12 @@ public class Solution {
             even.next = odd.next;
             even = even.next;
         }
-
         odd.next = evenHead;  // 拼接
-
         return head;
     }
 
     public static void main(String[] args) {
-        ListNode head = new ListNode(1);
-        ListNode node1 = new ListNode(2);
-        ListNode node2 = new ListNode(3);
-        ListNode node3 = new ListNode(4);
-        ListNode node4 = new ListNode(5);
-        head.next = node1;
-        node1.next = node2;
-        node2.next = node3;
-        node3.next = node4;
+        ListNode head = ListUtil.getListByArray(new int[]{1, 2, 3, 4, 5});
 
         Solution solution = new Solution();
         ListNode res = solution.oddEvenList(head);

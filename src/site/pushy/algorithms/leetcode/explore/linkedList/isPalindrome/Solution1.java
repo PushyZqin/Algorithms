@@ -9,28 +9,7 @@ import site.pushy.algorithms.leetcode.explore.linkedList.ListNode;
 public class Solution1 {
 
     public boolean isPalindrome(ListNode head) {
-        if (head == null) return false;
-
-        ListNode middle = findMiddle(head);  // 找到链表的中间结点
-        middle.next = reverse(middle.next);  // 将中间结点到链表末尾的所有结点翻转
-
-        ListNode p1 = head;
-        ListNode p2 = middle.next;
-
-        /* 让头结点和中间结点开始向后移动，对比它们的结点值是否相等 */
-        while (p1 != null && p2 != null && p1.val == p2.val) {
-            p1 = p1.next;
-            p2 = p2.next;
-        }
-
-        return p2 == null;
-    }
-
-    /**
-     * 通过双指针找到中间的结点
-     */
-    private ListNode findMiddle(ListNode head) {
-        if (head == null) return null;
+        if (head == null) return true;
 
         ListNode slow = head;
         ListNode fast = head.next;
@@ -40,7 +19,14 @@ public class Solution1 {
             fast = fast.next.next;
         }
 
-        return slow;
+        slow = reverse(slow.next);  // 将中间结点到链表末尾的所有结点翻转
+
+        /* 让头结点和中间结点开始向后移动，对比它们的结点值是否相等 */
+        while (head != null && slow != null && head.val == slow.val) {
+            head = head.next;
+            slow = slow.next;
+        }
+        return slow == null;
     }
 
     /**
@@ -48,14 +34,12 @@ public class Solution1 {
      */
     private ListNode reverse(ListNode head) {
         ListNode prev = null;
-
         while (head != null) {
             ListNode temp = head.next;
             head.next = prev;
             prev = head;
             head = temp;
         }
-
         return prev;
     }
 
