@@ -1,4 +1,4 @@
-package site.pushy.algorithms.simple.math;
+package simple.math;
 
 /**
  * 判断一个数是不是2的某次方

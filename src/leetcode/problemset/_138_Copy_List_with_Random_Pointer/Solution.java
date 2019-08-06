@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.problemset._138_Copy_List_with_Random_Pointer;
+package leetcode.problemset._138_Copy_List_with_Random_Pointer;
 
 import java.util.HashMap;
 import java.util.Map;

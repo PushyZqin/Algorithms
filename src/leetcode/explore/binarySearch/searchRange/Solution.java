@@ -1,52 +1,44 @@
-package site.pushy.algorithms.leetcode.explore.binarySearch.searchRange;
+package leetcode.explore.binarySearch.searchRange;
 
 import java.util.Arrays;
 
 /**
  * @author Pushy
- * @since 2019/1/20 17:04
+ * @since 2019/4/26 16:22
  */
 public class Solution {
 
-    /**
-     * 先用二分查找找到目标值，以这个位置为基准
-     * 向左寻找第一个目标值的位置，向右寻找最后一个目标值的位置
-     */
     public int[] searchRange(int[] nums, int target) {
-        int left = 0, right = nums.length - 1;
-        int[] res = {-1, -1};
+        if (nums == null || nums.length == 0) return new int[]{-1, -1};
+        if (nums.length == 1) {
+            if (nums[0] == target) return new int[]{0, 0};
+            else return new int[]{-1, -1};
+        }
 
-        while (left <= right) {
-            int mid = left + (right - left) / 2;
-            if (nums[mid] > target) {
-                right = mid - 1;
-            } else if (nums[mid] < target) {
-                left = mid + 1;
-            } else {
-                left = mid;
-                right = mid;
-                // 循环直到 nums[left] != target，那么left + 1则第一个出现的元素
-                while (left >= 0 && nums[left] == target)
-                    left--;
-                res[0] = left + 1;
-
-                // 循环直到 nums[right] != target，那么right + 1则第一个出现的元素
-                while (right < nums.length && nums[right] == target)
-                    right++;
-                res[1] = right - 1;
-
+        int l = 0, r = nums.length - 1;
+        while (l + 1 < r) {
+            int mid = l + (r - l) / 2;
+            if (nums[mid] < target) l = mid;
+            else if (nums[mid] > target) r = mid;
+            else {
+                l = mid;
+                r = mid;
                 break;
             }
         }
-        return res;
+
+        while (l >= 0 && nums[l] == target) l--;
+        while (r < nums.length && nums[r] == target) r++;
+        l++;
+        r--;
+
+        if (nums[l] == target && nums[r] == target) return new int[]{l, r};
+        return new int[]{-1, -1};
     }
 
     public static void main(String[] args) {
-        int[] nums = {5, 7, 7, 8, 8, 10};
-        int target = 6;
-
         Solution solution = new Solution();
-        int[] res = solution.searchRange(nums, target);
+        int[] res = solution.searchRange(new int[]{1, 2, 3}, 2);
         System.out.println("res：" + Arrays.toString(res));
     }
 

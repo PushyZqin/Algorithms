@@ -1,6 +1,6 @@
-package site.pushy.algorithms.leetcode.problemset._652_Find_Duplicate_Subtrees;
+package leetcode.problemset._652_Find_Duplicate_Subtrees;
 
-import site.pushy.algorithms.leetcode.explore.binaryTree.TreeNode;
+import leetcode.explore.binaryTree.TreeNode;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.problemset._49_Group_Anagrams;
+package leetcode.problemset._49_Group_Anagrams;
 
 import java.util.*;
 

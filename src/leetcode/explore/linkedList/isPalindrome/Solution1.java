@@ -1,6 +1,6 @@
-package site.pushy.algorithms.leetcode.explore.linkedList.isPalindrome;
+package leetcode.explore.linkedList.isPalindrome;
 
-import site.pushy.algorithms.leetcode.explore.linkedList.ListNode;
+import leetcode.explore.linkedList.ListNode;
 
 /**
  * @author Pushy

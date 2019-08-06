@@ -1,10 +1,10 @@
-package site.pushy.algorithms.datastructure.queueStack;
+package datastructure.queueStack;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author site.pushy.algorithms.leetcode
+ * @author leetcode
  */
 public class MyStack {
 

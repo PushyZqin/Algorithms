@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.explore.array.getRow;
+package leetcode.explore.array.getRow;
 
 import java.util.*;
 

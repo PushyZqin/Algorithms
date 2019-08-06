@@ -1,6 +1,6 @@
-package site.pushy.algorithms.leetcode.explore.hashTable.findDuplicateSubtrees;
+package leetcode.explore.hashTable.findDuplicateSubtrees;
 
-import site.pushy.algorithms.leetcode.explore.binaryTree.TreeNode;
+import leetcode.explore.binaryTree.TreeNode;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,6 +1,6 @@
-package site.pushy.algorithms.leetcode.explore.bst.insertIntoBST;
+package leetcode.explore.bst.insertIntoBST;
 
-import site.pushy.algorithms.leetcode.explore.binaryTree.TreeNode;
+import leetcode.explore.binaryTree.TreeNode;
 
 /**
  * @author Pushy

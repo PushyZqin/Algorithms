@@ -1,4 +1,4 @@
-package site.pushy.algorithms.simple.math;
+package simple.math;
 
 import java.util.ArrayList;
 import java.util.List;

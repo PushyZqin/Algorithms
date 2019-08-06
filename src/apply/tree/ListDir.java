@@ -1,4 +1,4 @@
-package site.pushy.algorithms.apply.tree;
+package apply.tree;
 
 import java.io.File;
 

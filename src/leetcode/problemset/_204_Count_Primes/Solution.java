@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.problemset._204_Count_Primes;
+package leetcode.problemset._204_Count_Primes;
 
 import java.util.*;
 

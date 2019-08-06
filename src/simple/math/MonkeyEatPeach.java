@@ -1,4 +1,4 @@
-package site.pushy.algorithms.simple.math;
+package simple.math;
 
 /**
  * 题目：猴子摘下了n个桃子，当天吃掉一半多一个，第二天也是吃掉剩下桃子的一半多一个，

@@ -1,4 +1,4 @@
-package site.pushy.algorithms.fourth.bagQueueStack;
+package fourth.bagQueueStack;
 
 import java.util.Iterator;
 

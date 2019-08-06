@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.problemset._242_Valid_Anagram;
+package leetcode.problemset._242_Valid_Anagram;
 
 /**
  * @author Pushy

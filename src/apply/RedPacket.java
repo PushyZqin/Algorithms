@@ -1,4 +1,4 @@
-package site.pushy.algorithms;
+package apply;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;

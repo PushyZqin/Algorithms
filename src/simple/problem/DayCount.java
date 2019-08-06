@@ -1,4 +1,4 @@
-package site.pushy.algorithms.simple.problem;
+package simple.problem;
 
 /**
  * 输入某年某月某日，判断这一天是这一年的第几天？

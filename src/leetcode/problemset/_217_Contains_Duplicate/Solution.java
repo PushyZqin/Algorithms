@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.problemset._217_Contains_Duplicate;
+package leetcode.problemset._217_Contains_Duplicate;
 
 import java.util.*;
 

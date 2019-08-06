@@ -1,4 +1,4 @@
-package site.pushy.algorithms.datastructure.hashSet;
+package datastructure.hashSet;
 
 import java.util.*;
 

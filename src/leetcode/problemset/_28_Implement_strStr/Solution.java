@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.problemset._28_Implement_strStr;
+package leetcode.problemset._28_Implement_strStr;
 
 /**
  * @author Pushy

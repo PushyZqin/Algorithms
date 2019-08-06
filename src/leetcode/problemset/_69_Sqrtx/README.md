@@ -31,7 +31,7 @@ export_on_save:
 
 ## Solution
 
-二分法的简单应用：
+二分法的简单应用，需要注意的是 `mid * mid` 可能会溢出，因此需要将`mid * mid > x`的判断条件修改为`mid > x / mid`：
 
 ```java
 public int mySqrt(int x) {

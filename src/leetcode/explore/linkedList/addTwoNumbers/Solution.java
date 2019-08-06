@@ -1,7 +1,7 @@
-package site.pushy.algorithms.leetcode.explore.linkedList.addTwoNumbers;
+package leetcode.explore.linkedList.addTwoNumbers;
 
-import site.pushy.algorithms.leetcode.explore.linkedList.ListNode;
-import site.pushy.algorithms.leetcode.explore.linkedList.ListUtil;
+import leetcode.explore.linkedList.ListNode;
+import leetcode.explore.linkedList.ListUtil;
 
 /**
  * @author Pushy

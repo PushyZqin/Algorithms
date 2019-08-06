@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Pow",
+            "request": "launch",
+            "mainClass": "interview.Pow",
+            "projectName": "java-algorithms_4f0b3cfa"
+        }
+    ]
+}

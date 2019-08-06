@@ -1,6 +1,6 @@
-package site.pushy.algorithms.leetcode.explore.binaryTree.inorderTraversal;
+package leetcode.explore.binaryTree.inorderTraversal;
 
-import site.pushy.algorithms.leetcode.explore.binaryTree.TreeNode;
+import leetcode.explore.binaryTree.TreeNode;
 
 import java.util.*;
 

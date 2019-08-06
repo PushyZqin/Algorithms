@@ -1,4 +1,4 @@
-package site.pushy.algorithms.simple;
+package simple;
 
 import java.lang.reflect.Method;
 

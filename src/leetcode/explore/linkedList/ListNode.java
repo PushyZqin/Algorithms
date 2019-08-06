@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.explore.linkedList;
+package leetcode.explore.linkedList;
 
 /**
  * @author Pushy

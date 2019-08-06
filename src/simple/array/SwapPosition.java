@@ -1,4 +1,4 @@
-package site.pushy.algorithms.simple.array;
+package simple.array;
 
 import java.util.Arrays;
 

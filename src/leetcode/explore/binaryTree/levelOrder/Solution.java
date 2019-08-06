@@ -1,6 +1,6 @@
-package site.pushy.algorithms.leetcode.explore.binaryTree.levelOrder;
+package leetcode.explore.binaryTree.levelOrder;
 
-import site.pushy.algorithms.leetcode.explore.binaryTree.TreeNode;
+import leetcode.explore.binaryTree.TreeNode;
 
 import java.util.*;
 
@@ -14,7 +14,7 @@ public class Solution {
 
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> res = new ArrayList<>();
-        Queue<TreeNode> queue = new ArrayDeque<>();
+        Queue<TreeNode> queue = new LinkedList<>();
 
         if (root == null) return res;
 
@@ -24,17 +24,14 @@ public class Solution {
             List<Integer> list = new ArrayList<>();
 
             while (size-- > 0) {  // 遍历每层的结点
-                TreeNode node = queue.remove();
+                TreeNode node = queue.poll();
                 list.add(node.val);
 
-                if (node.left != null)
-                    queue.offer(node.left);  // 将左子节点放入队列中
-                if (node.right != null)
-                    queue.offer(node.right); // 将右子节点放入队列中
+                if (node.left != null) queue.offer(node.left);  // 将左子节点放入队列中
+                if (node.right != null) queue.offer(node.right); // 将右子节点放入队列中
             }
             res.add(list);
         }
-
         return res;
     }
 

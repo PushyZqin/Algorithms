@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.problemset._278_First_Bad_Version;
+package leetcode.problemset._278_First_Bad_Version;
 
 /**
  * @author Pushy

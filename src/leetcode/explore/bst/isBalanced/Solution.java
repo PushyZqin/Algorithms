@@ -1,6 +1,6 @@
-package site.pushy.algorithms.leetcode.explore.bst.isBalanced;
+package leetcode.explore.bst.isBalanced;
 
-import site.pushy.algorithms.leetcode.explore.binaryTree.TreeNode;
+import leetcode.explore.binaryTree.TreeNode;
 
 /**
  * @author Pushy

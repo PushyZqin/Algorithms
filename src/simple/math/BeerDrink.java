@@ -1,4 +1,4 @@
-package site.pushy.algorithms.simple.math;
+package simple.math;
 
 /**
  * 啤酒每罐2.3元，饮料每罐1.9元。小明买了若干啤酒和饮料，一共花了82.3元。

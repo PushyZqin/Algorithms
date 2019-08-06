@@ -1,4 +1,4 @@
-package site.pushy.algorithms.simple.problem;
+package simple.problem;
 
 /**
  * 画星星，如下图：

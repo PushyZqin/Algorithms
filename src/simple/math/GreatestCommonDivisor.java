@@ -1,4 +1,4 @@
-package site.pushy.algorithms.simple.math;
+package simple.math;
 
 /**
  * 求一个数的最大公约数

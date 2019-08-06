@@ -7,7 +7,7 @@ package site.pushy.algorithms.leetcode.explore.binarySearch.myPow;
 public class Solution {
 
     public double myPow(double x, int n) {
-        // Todo Pow(x , n)
+        // Todo Power(x , n)
         return 0.0;
     }
 

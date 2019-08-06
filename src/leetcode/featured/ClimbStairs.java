@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.featured;
+package leetcode.featured;
 
 /**
  * @author Pushy

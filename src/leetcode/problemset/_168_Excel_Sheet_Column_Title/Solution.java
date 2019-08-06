@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.problemset._168_Excel_Sheet_Column_Title;
+package leetcode.problemset._168_Excel_Sheet_Column_Title;
 
 /**
  * @author Pushy

@@ -1,4 +1,4 @@
-package site.pushy.algorithms.mi;
+package mi;
 
 import java.util.Stack;
 

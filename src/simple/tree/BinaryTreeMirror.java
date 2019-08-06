@@ -1,6 +1,6 @@
-package site.pushy.algorithms.simple.tree;
+package simple.tree;
 
-import site.pushy.algorithms.leetcode.explore.binaryTree.TreeNode;
+import leetcode.explore.binaryTree.TreeNode;
 
 import java.util.Stack;
 

@@ -1,4 +1,4 @@
-package site.pushy.algorithms.simple.array;
+package simple.array;
 
 /**
  * 给你一个不重复的有序数组{0,1,2,3,....n}，其中有一个数字缺失，请把缺失的数字找出来

@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.explore.string.minSubArrayLen;
+package leetcode.explore.string.minSubArrayLen;
 
 /**
  * @author Pushy

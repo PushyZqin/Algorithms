@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.problemset._35_Search_Insert_Position;
+package leetcode.problemset._35_Search_Insert_Position;
 
 /**
  * @author Pushy

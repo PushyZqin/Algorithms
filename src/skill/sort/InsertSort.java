@@ -1,4 +1,4 @@
-package site.pushy.algorithms.skill.sort;
+package skill.sort;
 
 import java.util.Arrays;
 

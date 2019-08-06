@@ -1,4 +1,4 @@
-package site.pushy.algorithms.fourth.bagQueueStack;
+package fourth.bagQueueStack;
 
 /**
  * 使用链表来实现队列的数据结构

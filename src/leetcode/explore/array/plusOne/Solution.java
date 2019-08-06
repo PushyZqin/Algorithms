@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.explore.array.plusOne;
+package leetcode.explore.array.plusOne;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package site.pushy.algorithms.simple.problem;
+package simple.problem;
 
 /**
  * 十行的杨辉三角打印如下：

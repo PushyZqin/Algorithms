@@ -1,7 +1,7 @@
-package site.pushy.algorithms.leetcode.explore.linkedList.removeElements;
+package leetcode.explore.linkedList.removeElements;
 
-import site.pushy.algorithms.leetcode.explore.linkedList.ListNode;
-import site.pushy.algorithms.leetcode.explore.linkedList.ListUtil;
+import leetcode.explore.linkedList.ListNode;
+import leetcode.explore.linkedList.ListUtil;
 
 /**
  * @author Pushy

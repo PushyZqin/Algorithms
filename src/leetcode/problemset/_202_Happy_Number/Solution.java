@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.problemset._202_Happy_Number;
+package leetcode.problemset._202_Happy_Number;
 
 import java.util.HashSet;
 import java.util.Set;

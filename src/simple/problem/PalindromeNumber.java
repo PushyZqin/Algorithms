@@ -1,4 +1,4 @@
-package site.pushy.algorithms.simple.problem;
+package simple.problem;
 
 /**
  * 一个5位数，判断它是不是回文数。

@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.explore.array.moveZeroes;
+package leetcode.explore.array.moveZeroes;
 
 import java.util.*;
 

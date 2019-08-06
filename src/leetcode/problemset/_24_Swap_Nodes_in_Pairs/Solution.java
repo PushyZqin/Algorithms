@@ -1,7 +1,7 @@
-package site.pushy.algorithms.leetcode.problemset._24_Swap_Nodes_in_Pairs;
+package leetcode.problemset._24_Swap_Nodes_in_Pairs;
 
-import site.pushy.algorithms.leetcode.explore.linkedList.ListNode;
-import site.pushy.algorithms.leetcode.explore.linkedList.ListUtil;
+import leetcode.explore.linkedList.ListNode;
+import leetcode.explore.linkedList.ListUtil;
 
 /**
  * @author Pushy

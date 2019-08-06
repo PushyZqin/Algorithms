@@ -1,6 +1,6 @@
-package site.pushy.algorithms.leetcode.explore.binaryTree.preorderTraversal;
+package leetcode.explore.binaryTree.preorderTraversal;
 
-import site.pushy.algorithms.leetcode.explore.binaryTree.TreeNode;
+import leetcode.explore.binaryTree.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,6 +25,7 @@ public class Solution2 {
             TreeNode node = stack.pop();
             res.add(node.val);
 
+            // 由于先序遍历是先访问左结点，所以需要右结点先入栈
             if (node.right != null) stack.push(node.right);
             if (node.left != null) stack.push(node.left);
         }

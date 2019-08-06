@@ -1,6 +1,6 @@
-package site.pushy.algorithms.leetcode.problemset;
+package leetcode;
 
-import site.pushy.algorithms.leetcode.explore.linkedList.ListNode;
+import leetcode.explore.linkedList.ListNode;
 
 /**
  * @author Pushy

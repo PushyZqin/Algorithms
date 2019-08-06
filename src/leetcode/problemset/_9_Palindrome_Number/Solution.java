@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.problemset._9_Palindrome_Number;
+package leetcode.problemset._9_Palindrome_Number;
 
 import java.util.*;
 

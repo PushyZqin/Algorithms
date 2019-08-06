@@ -270,14 +270,29 @@ pre[data-line] .line-highlight[data-end]:after {
 
 <h2 class="mume-header" id="question">Question</h2>
 
-<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x6570;&#x7EC4; nums &#xFF0C;&#x627E;&#x5230;&#x4E00;&#x4E2A;&#x5177;&#x6709;&#x6700;&#x5927;&#x548C;&#x7684;&#x8FDE;&#x7EED;&#x5B50;&#x6570;&#x7EC4;&#xFF08;&#x5B50;&#x6570;&#x7EC4;&#x6700;&#x5C11;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF09;&#xFF0C;&#x8FD4;&#x56DE;&#x5176;&#x6700;&#x5927;&#x548C;&#x3002;</p>
+<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x6570;&#x7EC4; <code>nums</code> &#xFF0C;&#x627E;&#x5230;&#x4E00;&#x4E2A;&#x5177;&#x6709;&#x6700;&#x5927;&#x548C;&#x7684;&#x8FDE;&#x7EED;&#x5B50;&#x6570;&#x7EC4;&#xFF08;&#x5B50;&#x6570;&#x7EC4;&#x6700;&#x5C11;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF09;&#xFF0C;&#x8FD4;&#x56DE;&#x5176;&#x6700;&#x5927;&#x548C;&#x3002;</p>
 <p>&#x793A;&#x4F8B;:</p>
 <pre data-role="codeBlock" data-info="java" class="language-java">&#x8F93;&#x5165;<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
 &#x8F93;&#x51FA;<span class="token operator">:</span> <span class="token number">6</span>
 &#x89E3;&#x91CA;<span class="token operator">:</span> &#x8FDE;&#x7EED;&#x5B50;&#x6570;&#x7EC4; <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">]</span> &#x7684;&#x548C;&#x6700;&#x5927;&#xFF0C;&#x4E3A; <span class="token number">6</span>&#x3002;
 </pre><p>&#x8FDB;&#x9636;:</p>
 <p>&#x5982;&#x679C;&#x4F60;&#x5DF2;&#x7ECF;&#x5B9E;&#x73B0;&#x590D;&#x6742;&#x5EA6;&#x4E3A; O(n) &#x7684;&#x89E3;&#x6CD5;&#xFF0C;&#x5C1D;&#x8BD5;&#x4F7F;&#x7528;&#x66F4;&#x4E3A;&#x7CBE;&#x5999;&#x7684;&#x5206;&#x6CBB;&#x6CD5;&#x6C42;&#x89E3;&#x3002;</p>
+<h2 class="mume-header" id="solution">Solution</h2>
 
+<p>&#x8BE5;&#x9898;&#x9898;&#x610F;&#x6807;&#x4E3A;&#x7B80;&#x5355;&#xFF0C;&#x867D;&#x7136;&#x7EB3;&#x5165;&#x52A8;&#x6001;&#x89C4;&#x5212;&#x7684;&#x9898;&#x578B;&#xFF0C;&#x4F46;&#x662F;&#x7528;&#x7B80;&#x5355;&#x89E3;&#x6CD5;&#x6548;&#x7387;&#x66F4;&#x5FEB;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="java" class="language-java"><span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">maxSubArray2</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> res <span class="token operator">=</span> nums<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>   <span class="token comment">// &#x8BB0;&#x5F55;&#x5F53;&#x524D;&#x6700;&#x5927;&#x8FDE;&#x7EED;&#x5E8F;&#x5217;&#x4E4B;&#x548C;</span>
+    <span class="token keyword">int</span> sum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> num <span class="token operator">:</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>sum <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span>  <span class="token comment">// &#x6CA1;&#x65AD;</span>
+            sum <span class="token operator">+=</span> num<span class="token punctuation">;</span>
+        <span class="token keyword">else</span>          <span class="token comment">// &#x65AD;&#x4E86;</span>
+            sum <span class="token operator">=</span> num<span class="token punctuation">;</span>
+        res <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>res<span class="token punctuation">,</span> sum<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre>
       </div>
       
       

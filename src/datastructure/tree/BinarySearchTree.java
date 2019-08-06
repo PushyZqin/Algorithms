@@ -1,6 +1,6 @@
-package site.pushy.algorithms.datastructure.tree;
+package datastructure.tree;
 
-import site.pushy.algorithms.leetcode.explore.binaryTree.TreeNode;
+import leetcode.explore.binaryTree.TreeNode;
 
 /**
  * 二叉搜索树实现

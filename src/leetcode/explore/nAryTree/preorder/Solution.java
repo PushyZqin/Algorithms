@@ -37,7 +37,7 @@ public class Solution {
         secondLevel.add(new Node(4, new ArrayList<>()));
         root.children = secondLevel;
 
-//        Main solution = new Main();
+//        offer.JumpFloorIII solution = new offer.JumpFloorIII();
         Solution2 solution = new Solution2();
         List<Integer> res = solution.preorder(root);
         System.out.println("res：" + res);

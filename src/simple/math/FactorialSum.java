@@ -1,4 +1,4 @@
-package site.pushy.algorithms.simple.math;
+package simple.math;
 
 /**
  * 求1-n阶乘之和，例如3阶乘的和其实上就是2阶乘的和+3的阶乘

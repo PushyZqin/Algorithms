@@ -1,4 +1,4 @@
-package site.pushy.algorithms.datastructure.tree;
+package datastructure.tree;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
@@ -104,12 +104,10 @@ public class BinaryTree {
     }
 
     /**
-     * 深度优先遍历，相当于先序遍历。使用栈非递归实现二叉树的遍历
+     * 深度优先遍历。使用栈非递归实现二叉树的遍历
      */
     public static void DFS(Node root) {
-        if (root == null) {
-            return;
-        }
+        if (root == null) return;
         Stack<Node> nodes = new Stack<>();
         nodes.add(root);
 
@@ -151,8 +149,8 @@ public class BinaryTree {
     }
 
     public static void main(String[] args) {
-        Node root = BinaryTree.createTree();
-//        Node root = BinaryTree.preOrderCreate(null);
+//        Node root = BinaryTree.createTree();
+        Node root = BinaryTree.preOrderCreate(null);
 
         System.out.println("先序遍历：");
         BinaryTree.preOrderTraverse(root);

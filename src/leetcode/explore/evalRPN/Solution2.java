@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.explore.evalRPN;
+package leetcode.explore.evalRPN;
 
 /**
  * @author Pushy

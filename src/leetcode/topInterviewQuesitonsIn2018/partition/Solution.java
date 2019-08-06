@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.topInterviewQuesitonsIn2018.partition;
+package leetcode.topInterviewQuesitonsIn2018.partition;
 
 import java.util.*;
 

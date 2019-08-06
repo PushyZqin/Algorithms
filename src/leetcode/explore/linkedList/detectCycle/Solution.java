@@ -1,6 +1,6 @@
-package site.pushy.algorithms.leetcode.explore.linkedList.detectCycle;
+package leetcode.explore.linkedList.detectCycle;
 
-import site.pushy.algorithms.leetcode.explore.linkedList.ListNode;
+import leetcode.explore.linkedList.ListNode;
 
 /**
  * @author Pushy

@@ -1,4 +1,4 @@
-package site.pushy.algorithms.simple.array;
+package simple.array;
 
 /**
  * 获取二维数组每列最小的值

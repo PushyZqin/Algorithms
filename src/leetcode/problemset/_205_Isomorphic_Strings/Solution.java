@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.problemset._205_Isomorphic_Strings;
+package leetcode.problemset._205_Isomorphic_Strings;
 
 import java.util.*;
 

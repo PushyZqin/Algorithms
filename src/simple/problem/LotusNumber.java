@@ -1,6 +1,6 @@
-package site.pushy.algorithms.simple.problem;
+package simple.problem;
 
-import site.pushy.algorithms.simple.CalculateRunTime;
+import simple.CalculateRunTime;
 
 import java.util.LinkedList;
 import java.util.List;

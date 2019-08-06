@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.problemset._268_Missing_Number;
+package leetcode.problemset._268_Missing_Number;
 
 /**
  * @author Pushy

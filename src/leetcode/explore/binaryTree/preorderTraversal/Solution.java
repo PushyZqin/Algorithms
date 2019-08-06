@@ -1,6 +1,6 @@
-package site.pushy.algorithms.leetcode.explore.binaryTree.preorderTraversal;
+package leetcode.explore.binaryTree.preorderTraversal;
 
-import site.pushy.algorithms.leetcode.explore.binaryTree.TreeNode;
+import leetcode.explore.binaryTree.TreeNode;
 
 import java.util.*;
 
@@ -15,11 +15,13 @@ public class Solution {
     public List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> res = new ArrayList<>();
         if (root == null) return res;
+
         return traversal(root, res);
     }
 
     public List<Integer> traversal(TreeNode node, List<Integer> res) {
         if (node == null) return res;
+
         res.add(node.val);
         traversal(node.left, res);
         traversal(node.right, res);

@@ -1,6 +1,6 @@
-package site.pushy.algorithms.leetcode.explore.binaryTree.postorderTraversal;
+package leetcode.explore.binaryTree.postorderTraversal;
 
-import site.pushy.algorithms.leetcode.explore.binaryTree.TreeNode;
+import leetcode.explore.binaryTree.TreeNode;
 
 import java.util.*;
 

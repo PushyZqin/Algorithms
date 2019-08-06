@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.problemset._58_Length_of_Last_Word;
+package leetcode.problemset._58_Length_of_Last_Word;
 
 /**
  * @author Pushy

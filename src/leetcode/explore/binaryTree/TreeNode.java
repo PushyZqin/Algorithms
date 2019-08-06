@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.explore.binaryTree;
+package leetcode.explore.binaryTree;
 
 /**
  * @author Pushy

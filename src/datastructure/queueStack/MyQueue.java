@@ -1,11 +1,11 @@
-package site.pushy.algorithms.datastructure.queueStack;
+package datastructure.queueStack;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * 简单暴力，用起始指针变量来维护队列的结构。缺点就是，随指针的不断递增，浪费的空间也越来越多
- * @author site.pushy.algorithms.leetcode
+ * @author leetcode
  */
 class MyQueue {
     // store elements

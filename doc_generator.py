@@ -10,22 +10,21 @@ def find_readme_title(path: str) -> str:
     readme_path = '{}/{}'.format(path, "README.md")
     if os.path.exists(readme_path):
         with open(readme_path, encoding='utf-8') as f:
-            if f.readline().startswith("---"):
-                text = ""
-                for i in range(10):
-                    line = f.readline()
-                    if line.startswith("#"):
-                        text = line
-                        break
-                text: str = text.replace("\n", "")
-                if text.find('[') != -1 and text.find(']') != -1:
-                    sub_text = text[text.find('['): text.index(']')]
-                    title = sub_text[sub_text.find('.') + 2:]
-                else:
-                    idx: int = text.index('.')
-                    title = text[idx + 2:]
+            text = ""
+            for i in range(10):
+                line = f.readline()
+                if line.startswith("#"):
+                    text = line
+                    break
+            text: str = text.replace("\n", "")
+            if text.find('[') != -1 and text.find(']') != -1:
+                sub_text = text[text.find('['): text.index(']')]
+                title = sub_text[sub_text.find('.') + 2:]
+            else:
+                idx: int = text.index('.')
+                title = text[idx + 2:]
 
-                return title
+            return title
 
 def get_map():
     map = {}

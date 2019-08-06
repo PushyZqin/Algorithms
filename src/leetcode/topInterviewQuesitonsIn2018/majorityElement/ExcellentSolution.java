@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.topInterviewQuesitonsIn2018.majorityElement;
+package leetcode.topInterviewQuesitonsIn2018.majorityElement;
 
 /**
  * @author Pushy

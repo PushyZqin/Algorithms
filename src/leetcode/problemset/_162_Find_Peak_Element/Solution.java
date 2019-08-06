@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.problemset._162_Find_Peak_Element;
+package leetcode.problemset._162_Find_Peak_Element;
 
 /**
  * @author Pushy

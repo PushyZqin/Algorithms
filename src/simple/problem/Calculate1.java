@@ -1,4 +1,4 @@
-package site.pushy.algorithms.simple.problem;
+package simple.problem;
 
 /**
  * 求"1！+4！(2的平方)+9！(3的平方)+...+n的值

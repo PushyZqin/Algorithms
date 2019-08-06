@@ -1,4 +1,4 @@
-package site.pushy.algorithms.datastructure.queueStack;
+package datastructure.queueStack;
 
 class MyCircularQueue {
 

@@ -1,6 +1,4 @@
-package site.pushy.algorithms.leetcode.explore.string.longestCommonPrefix;
-
-import site.pushy.algorithms.datastructure.tree.TrieTree;
+package leetcode.explore.string.longestCommonPrefix;
 
 /**
  * @author Pushy

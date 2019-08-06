@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.explore.array.rotate;
+package leetcode.explore.array.rotate;
 
 import java.util.Arrays;
 

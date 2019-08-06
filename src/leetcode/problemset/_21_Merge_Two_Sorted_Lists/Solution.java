@@ -1,7 +1,7 @@
-package site.pushy.algorithms.leetcode.problemset._21_Merge_Two_Sorted_Lists;
+package leetcode.problemset._21_Merge_Two_Sorted_Lists;
 
-import site.pushy.algorithms.leetcode.explore.linkedList.ListNode;
-import site.pushy.algorithms.leetcode.explore.linkedList.ListUtil;
+import leetcode.explore.linkedList.ListNode;
+import leetcode.explore.linkedList.ListUtil;
 
 /**
  * @author Pushy

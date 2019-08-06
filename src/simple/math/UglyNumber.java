@@ -1,4 +1,4 @@
-package site.pushy.algorithms.simple.math;
+package simple.math;
 
 /**
  * 判断一个数字是不是ugly number（分解出来的质因数只有2、3、5这3个数字）

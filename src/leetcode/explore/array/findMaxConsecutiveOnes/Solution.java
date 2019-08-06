@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.explore.array.findMaxConsecutiveOnes;
+package leetcode.explore.array.findMaxConsecutiveOnes;
 
 /**
  * @author Pushy

@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.explore.array.findDiagonalOrder;
+package leetcode.explore.array.findDiagonalOrder;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.problemset._3_Longest_Substring_Without_Repeating_Characters;
+package leetcode.problemset._3_Longest_Substring_Without_Repeating_Characters;
 
 import java.util.*;
 

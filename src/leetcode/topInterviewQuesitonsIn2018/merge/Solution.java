@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.topInterviewQuesitonsIn2018.merge;
+package leetcode.topInterviewQuesitonsIn2018.merge;
 
 import java.util.*;
 

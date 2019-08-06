@@ -35,7 +35,7 @@ public class Solution {
         root.children = secondLevel;
 
         Solution2 solution = new Solution2();
-//        Main solution = new Main();
+//        offer.JumpFloorIII solution = new offer.JumpFloorIII();
         int res = solution.maxDepth(root);
         System.out.println("res：" + res);
     }

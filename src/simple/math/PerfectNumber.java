@@ -1,4 +1,4 @@
-package site.pushy.algorithms.simple.math;
+package simple.math;
 
 import java.util.LinkedList;
 import java.util.List;

@@ -1,6 +1,6 @@
-package site.pushy.algorithms.leetcode.problemset._142_Linked_List_Cycle_II;
+package leetcode.problemset._142_Linked_List_Cycle_II;
 
-import site.pushy.algorithms.leetcode.explore.linkedList.ListNode;
+import leetcode.explore.linkedList.ListNode;
 
 /**
  * @author Pushy

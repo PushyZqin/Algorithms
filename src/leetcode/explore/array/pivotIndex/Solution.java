@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.explore.array.pivotIndex;
+package leetcode.explore.array.pivotIndex;
 
 /**
  * @author Pushy

@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.problemset._125_Valid_Palindrome;
+package leetcode.problemset._125_Valid_Palindrome;
 
 /**
  * @author Pushy

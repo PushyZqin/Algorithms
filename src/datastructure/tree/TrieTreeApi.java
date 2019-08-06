@@ -1,4 +1,4 @@
-package site.pushy.algorithms.datastructure.tree;
+package datastructure.tree;
 
 /**
  * @author Pushy

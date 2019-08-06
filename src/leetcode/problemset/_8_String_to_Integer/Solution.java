@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.problemset._8_String_to_Integer;
+package leetcode.problemset._8_String_to_Integer;
 
 /**
  * @author Pushy
@@ -7,19 +7,34 @@ package site.pushy.algorithms.leetcode.problemset._8_String_to_Integer;
 public class Solution {
 
     public int myAtoi(String str) {
-        str = str.trim();
-        boolean negative = false;
-        if (str.charAt(0) == '-') {
-            negative = true;
+        if (str == null || str.length() == 0) return 0;
+
+        int i = 0;
+        while (str.charAt(i) == ' ') {
+            i++;
+            if (i == str.length()) return 0;
         }
-        StringBuilder sb = new StringBuilder();
-        for (char c : str.toCharArray()) {
-            if (c >= '0' && c <= '9') {
-                sb.append(c);
+
+        int sign = 1;
+        if (str.charAt(i) == '+') i++;
+        else if (str.charAt(i) == '-'){
+            sign = -1;
+            i++;
+        }
+
+        long res = 0;
+        while (i < str.length()) {
+            int digit = str.charAt(i) - '0';
+            if (digit < 0 || digit > 9) break;
+
+            res = res * 10 + digit;
+
+            if (res > Integer.MAX_VALUE) {
+                return sign == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE;
             }
+            i++;
         }
-        int res = Integer.parseInt(sb.toString());
-        return negative ? -res : res;
+        return (int) (sign * res);
     }
 
     public static void main(String[] args) {

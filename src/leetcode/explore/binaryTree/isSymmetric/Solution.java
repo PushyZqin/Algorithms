@@ -1,6 +1,6 @@
-package site.pushy.algorithms.leetcode.explore.binaryTree.isSymmetric;
+package leetcode.explore.binaryTree.isSymmetric;
 
-import site.pushy.algorithms.leetcode.explore.binaryTree.TreeNode;
+import leetcode.explore.binaryTree.TreeNode;
 
 /**
  * 使用迭代解决
@@ -41,7 +41,6 @@ public class Solution {
         root.right = right;
 
         Solution solution = new Solution();
-//        Main solution = new Main();
         boolean res = solution.isSymmetric(root);
         System.out.println("res：" + res);
     }

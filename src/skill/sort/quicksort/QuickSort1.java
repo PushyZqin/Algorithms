@@ -1,4 +1,4 @@
-package site.pushy.algorithms.skill.sort.quicksort;
+package skill.sort.quicksort;
 
 import java.util.Arrays;
 

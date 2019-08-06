@@ -23,7 +23,7 @@ export_on_save:
 
 ## Solution
 
-该题与 [415. 字符串相加](https://github.com/pushyzheng/Algorithms/tree/master/src/site/pushy/algorithms/leetcode/problemset/_415_Add_Strings) 类似，都是运用了十进制的数学原理，用`carry`变量来记录进位的值，其他就是链表的一些操作：
+该题与 [415. 字符串相加](https://github.com/pushyzheng/Algorithms/tree/master/src/leetcode/problemset/_415_Add_Strings) 类似，都是运用了十进制的数学原理，用`carry`变量来记录进位的值，其他就是链表的一些操作：
 
 ```java
 public ListNode addTwoNumbers(ListNode l1, ListNode l2) {

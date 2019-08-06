@@ -1,6 +1,6 @@
-package site.pushy.algorithms.leetcode.explore.bst.BSTIterator;
+package leetcode.explore.bst.BSTIterator;
 
-import site.pushy.algorithms.leetcode.explore.binaryTree.TreeNode;
+import leetcode.explore.binaryTree.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;

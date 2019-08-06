@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.problemset._290_Word_Pattern;
+package leetcode.problemset._290_Word_Pattern;
 
 import java.util.*;
 

@@ -1,6 +1,6 @@
-package site.pushy.algorithms.leetcode.problemset._160_Intersection_of_Two_Linked_Lists;
+package leetcode.problemset._160_Intersection_of_Two_Linked_Lists;
 
-import site.pushy.algorithms.leetcode.explore.linkedList.ListNode;
+import leetcode.explore.linkedList.ListNode;
 
 /**
  * @author Pushy

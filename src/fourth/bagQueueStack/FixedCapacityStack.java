@@ -1,6 +1,4 @@
-package site.pushy.algorithms.fourth.bagQueueStack;
-
-import java.util.Iterator;
+package fourth.bagQueueStack;
 
 /**
  * 定容栈的实现

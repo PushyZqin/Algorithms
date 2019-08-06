@@ -1,4 +1,4 @@
-package site.pushy.algorithms.simple.math;
+package simple.math;
 
 /**
  * 大数学家欧拉在集市上遇到了本村的两个农妇，每人跨着个空篮子。她们和欧拉打招呼说两人刚刚卖完了所有的鸡蛋。

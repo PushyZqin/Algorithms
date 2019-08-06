@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.problemset._153_Find_Minimum_in_Rotated_Sorted_Array;
+package leetcode.problemset._153_Find_Minimum_in_Rotated_Sorted_Array;
 
 /**
  * @author Pushy

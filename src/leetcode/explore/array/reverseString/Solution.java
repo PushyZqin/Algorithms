@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.explore.array.reverseString;
+package leetcode.explore.array.reverseString;
 
 import java.util.*;
 

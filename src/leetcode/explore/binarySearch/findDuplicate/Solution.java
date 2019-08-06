@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.explore.binarySearch.findDuplicate;
+package src.leetcode.explore.binarySearch.findDuplicate;
 
 /**
  * @author Pushy

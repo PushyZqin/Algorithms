@@ -1,4 +1,4 @@
-package site.pushy.algorithms.mi;
+package mi;
 
 /**
  * @author Pushy

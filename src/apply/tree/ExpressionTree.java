@@ -1,7 +1,9 @@
-package site.pushy.algorithms.apply.tree;
+package apply.tree;
 
-import site.pushy.algorithms.datastructure.tree.BinaryTree;
+import leetcode.explore.binaryTree.TreeNode;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
 
 /**
@@ -10,7 +12,7 @@ import java.util.Stack;
  */
 public class ExpressionTree {
 
-    class Node {
+    static class Node {
         char data;
         Node left;
         Node right;
@@ -18,6 +20,8 @@ public class ExpressionTree {
         public Node(char data) {
             this.data = data;
         }
+
+
 
         @Override
         public String toString() {
@@ -55,37 +59,64 @@ public class ExpressionTree {
         return stack.pop();
     }
 
-    public void preOrderTraverse(Node node) {
-        if (node == null) {
+    public void preOrderTraverse(Node root) {
+        if (root == null) {
             return;
         }
-        System.out.print(node.data + " ");
-        preOrderTraverse(node.left);
-        preOrderTraverse(node.right);
+        System.out.print(root.data + " ");
+        preOrderTraverse(root.left);
+        preOrderTraverse(root.right);
     }
 
-    public void midOrderTraverse(Node node) {
-        if (node == null) {
-            return;
+    public void midOrderTraverse(Node root) {
+//        if (root == null) return;
+//
+//        midOrderTraverse(root.left);
+//        System.out.print(root.data + " ");
+//        midOrderTraverse(root.right);
+
+        StringBuilder sb = new StringBuilder();
+        Stack<Node> stack = new Stack<>();
+
+        Node cur = root;
+        while (cur != null || !stack.isEmpty()) {
+            while (cur != null) {
+                stack.push(cur);
+                cur = cur.left;
+            }
+            cur = stack.pop();
+            sb.append(cur.data).append(" ");
+            cur = cur.right;
         }
-        midOrderTraverse(node.left);
-        System.out.print(node.data + " ");
-        midOrderTraverse(node.right);
+        System.out.println(sb.toString());
     }
 
-    public void postOrderTraverse(Node node) {
-        if (node == null) {
+    public void postOrderTraverse(Node root) {
+        if (root == null) {
             return;
         }
-        postOrderTraverse(node.left);
-        postOrderTraverse(node.right);
-        System.out.print(node.data + " ");
+        postOrderTraverse(root.left);
+        postOrderTraverse(root.right);
+        System.out.print(root.data + " ");
     }
 
     public static void main(String[] args) {
         ExpressionTree eTree = new ExpressionTree();
 
-        Node root = eTree.create("123*+45*6+7*+");
+        Node root = new Node('+');
+        root.left = new Node('+');
+        root.left.left = new Node('a');
+        root.left.right = new Node('*');
+        root.left.right.left = new Node('b');
+        root.left.right.right = new Node('c');
+
+        root.right = new Node('*');
+        root.right.right = new Node('g');
+        root.right.left = new Node('+');
+        root.right.left.left = new Node('*');
+        root.right.left.right = new Node('f');
+        root.right.left.left.left = new Node('d');
+        root.right.left.left.right = new Node('c');
 
         System.out.println("前缀表达式：");
         eTree.preOrderTraverse(root);

@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.explore.array.arrayPairSum;
+package leetcode.explore.array.arrayPairSum;
 
 import java.util.Arrays;
 

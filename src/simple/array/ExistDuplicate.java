@@ -1,4 +1,4 @@
-package site.pushy.algorithms.simple.array;
+package simple.array;
 
 public class ExistDuplicate {
 

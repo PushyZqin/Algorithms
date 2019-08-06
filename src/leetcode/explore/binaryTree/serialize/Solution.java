@@ -1,6 +1,6 @@
-package site.pushy.algorithms.leetcode.explore.binaryTree.serialize;
+package leetcode.explore.binaryTree.serialize;
 
-import site.pushy.algorithms.leetcode.explore.binaryTree.TreeNode;
+import leetcode.explore.binaryTree.TreeNode;
 
 /**
  * @author Pushy

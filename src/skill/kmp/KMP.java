@@ -1,4 +1,4 @@
-package site.pushy.algorithms.skill.kmp;
+package skill.kmp;
 
 import java.util.Arrays;
 

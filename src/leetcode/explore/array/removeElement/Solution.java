@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.explore.array.removeElement;
+package leetcode.explore.array.removeElement;
 
 /**
  * @author Pushy

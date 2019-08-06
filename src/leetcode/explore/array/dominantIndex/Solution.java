@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.explore.array.dominantIndex;
+package leetcode.explore.array.dominantIndex;
 
 /**
  * @author Pushy

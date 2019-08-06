@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.problemset._172_Factorial_Trailing_Zeroes;
+package leetcode.problemset._172_Factorial_Trailing_Zeroes;
 
 /**
  * @author Pushy

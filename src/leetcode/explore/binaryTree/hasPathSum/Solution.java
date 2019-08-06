@@ -1,12 +1,10 @@
-package site.pushy.algorithms.leetcode.explore.binaryTree.hasPathSum;
+package leetcode.explore.binaryTree.hasPathSum;
 
-import site.pushy.algorithms.leetcode.explore.binaryTree.TreeNode;
+import leetcode.explore.binaryTree.TreeNode;
 
 /**
- * 递归解决
- *
  * @author Pushy
- * @since 2019/1/27 13:31
+ * @since 2019/4/30 9:55
  */
 public class Solution {
 
@@ -15,11 +13,14 @@ public class Solution {
      */
     public boolean hasPathSum(TreeNode root, int sum) {
         if (root == null) return false;
+
         if (root.left == null && root.right == null && root.val == sum)
             return true;
 
-        return hasPathSum(root.left, sum - root.val)
-                || hasPathSum(root.right, sum - root.val);
+        boolean hasLeft = hasPathSum(root.left, sum - root.val);
+        boolean hasRight = hasPathSum(root.right, sum - root.val);
+
+        return hasLeft || hasRight;
     }
 
     public static void main(String[] args) {
@@ -38,11 +39,8 @@ public class Solution {
         root.left = left;
         root.right = right;
 
-        int sum = 22;
-
         Solution solution = new Solution();
-//        Main solution = new Main();
-        boolean res = solution.hasPathSum(root, sum);
+        boolean res = solution.hasPathSum(root, 22);
         System.out.println("res：" + res);
     }
 

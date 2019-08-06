@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.topInterviewQuesitonsIn2018.searchMatrix;
+package leetcode.topInterviewQuesitonsIn2018.searchMatrix;
 
 /**
  * @author Pushy

@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.explore.array.spiralOrder;
+package leetcode.explore.array.spiralOrder;
 
 import java.util.*;
 

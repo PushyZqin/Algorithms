@@ -1,6 +1,6 @@
-package site.pushy.algorithms.leetcode.problemset._141_Linked_List_Cycle;
+package leetcode.problemset._141_Linked_List_Cycle;
 
-import site.pushy.algorithms.leetcode.explore.linkedList.ListNode;
+import leetcode.explore.linkedList.ListNode;
 
 import java.util.HashSet;
 import java.util.Set;

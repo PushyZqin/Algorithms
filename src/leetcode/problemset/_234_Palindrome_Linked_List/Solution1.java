@@ -1,6 +1,6 @@
-package site.pushy.algorithms.leetcode.problemset._234_Palindrome_Linked_List;
+package leetcode.problemset._234_Palindrome_Linked_List;
 
-import site.pushy.algorithms.leetcode.explore.linkedList.ListNode;
+import leetcode.explore.linkedList.ListNode;
 
 /**
  * @author Pushy

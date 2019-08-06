@@ -1,6 +1,6 @@
-package site.pushy.algorithms.leetcode.explore.binaryTree.isSymmetric;
+package leetcode.explore.binaryTree.isSymmetric;
 
-import site.pushy.algorithms.leetcode.explore.binaryTree.TreeNode;
+import leetcode.explore.binaryTree.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;

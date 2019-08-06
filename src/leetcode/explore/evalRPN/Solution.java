@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.explore.evalRPN;
+package leetcode.explore.evalRPN;
 
 import java.util.*;
 
@@ -10,6 +10,7 @@ public class Solution {
 
     public int evalRPN(String[] tokens) {
         Stack<Integer> stack = new Stack<>();
+
         List<String> ops = Arrays.asList("+", "-", "*", "/");
 
         for (String s : tokens) {

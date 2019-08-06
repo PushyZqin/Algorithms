@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.explore.array.removeDuplicates;
+package leetcode.explore.array.removeDuplicates;
 
 import java.util.Arrays;
 

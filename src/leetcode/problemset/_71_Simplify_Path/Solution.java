@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.problemset._71_Simplify_Path;
+package leetcode.problemset._71_Simplify_Path;
 
 import java.util.*;
 

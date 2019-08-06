@@ -7,7 +7,7 @@ export_on_save:
 
 ## Question
 
-给定一个整数数组 nums ，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。
+给定一个整数数组 `nums` ，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。
 
 示例:
 
@@ -20,3 +20,22 @@ export_on_save:
 进阶:
 
 如果你已经实现复杂度为 O(n) 的解法，尝试使用更为精妙的分治法求解。
+
+## Solution
+
+该题题意标为简单，虽然纳入动态规划的题型，但是用简单解法效率更快：
+
+```java
+public int maxSubArray2(int[] nums) {
+    int res = nums[0];   // 记录当前最大连续序列之和
+    int sum = 0;
+    for (int num : nums) {
+        if (sum > 0)  // 没断
+            sum += num;
+        else          // 断了
+            sum = num;
+        res = Math.max(res, sum);
+    }
+    return res;
+}
+```

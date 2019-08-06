@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.problemset._13_Roman_to_Integer;
+package leetcode.problemset._13_Roman_to_Integer;
 
 import java.util.*;
 

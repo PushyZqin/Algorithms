@@ -1,6 +1,6 @@
-package site.pushy.algorithms.leetcode.explore.linkedList.hasCycle;
+package leetcode.explore.linkedList.hasCycle;
 
-import site.pushy.algorithms.leetcode.explore.linkedList.ListNode;
+import leetcode.explore.linkedList.ListNode;
 
 import java.util.*;
 

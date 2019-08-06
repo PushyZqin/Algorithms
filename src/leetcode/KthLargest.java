@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.problemset;
+package leetcode;
 
 import java.util.PriorityQueue;
 

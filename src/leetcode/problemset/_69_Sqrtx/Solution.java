@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.problemset._69_Sqrtx;
+package leetcode.problemset._69_Sqrtx;
 
 /**
  * @author Pushy

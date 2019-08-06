@@ -1,6 +1,4 @@
-package site.pushy.algorithms.datastructure.tree;
-
-import java.util.*;
+package datastructure.tree;
 
 /**
  * @author Pushy

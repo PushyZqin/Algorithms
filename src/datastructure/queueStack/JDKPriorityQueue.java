@@ -1,4 +1,4 @@
-package site.pushy.algorithms.datastructure.queueStack;
+package datastructure.queueStack;
 
 import java.util.Arrays;
 import java.util.Comparator;

@@ -1,6 +1,6 @@
-package site.pushy.algorithms.leetcode.explore.bst.isValidBST;
+package leetcode.explore.bst.isValidBST;
 
-import site.pushy.algorithms.leetcode.explore.binaryTree.TreeNode;
+import leetcode.explore.binaryTree.TreeNode;
 
 import java.util.Stack;
 

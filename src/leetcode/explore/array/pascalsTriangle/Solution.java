@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.explore.array.pascalsTriangle;
+package leetcode.explore.array.pascalsTriangle;
 
 import java.util.LinkedList;
 import java.util.List;

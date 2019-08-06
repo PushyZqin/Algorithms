@@ -1,6 +1,6 @@
-package site.pushy.algorithms.leetcode.explore.binaryTree.inorderTraversal;
+package leetcode.explore.binaryTree.inorderTraversal;
 
-import site.pushy.algorithms.leetcode.explore.binaryTree.TreeNode;
+import leetcode.explore.binaryTree.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,8 +20,7 @@ public class Solution2 {
 
         TreeNode cur = root;
         while (cur != null || !stack.isEmpty()) {
-            /* 遍历cur的左子结点，并将这些结点都压入栈中 */
-            while (cur != null) {
+            while (cur != null) { // 遍历cur的左子结点，并将这些结点都压入栈中
                 stack.push(cur);
                 cur = cur.left;
             }

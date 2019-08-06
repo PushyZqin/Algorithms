@@ -1,7 +1,7 @@
-package site.pushy.algorithms.leetcode.problemset._19_Remove_Nth_Node_From_End_of_List;
+package leetcode.problemset._19_Remove_Nth_Node_From_End_of_List;
 
-import site.pushy.algorithms.leetcode.explore.linkedList.ListNode;
-import site.pushy.algorithms.leetcode.explore.linkedList.ListUtil;
+import leetcode.explore.linkedList.ListNode;
+import leetcode.explore.linkedList.ListUtil;
 
 /**
  * @author Pushy

@@ -1,6 +1,6 @@
-package site.pushy.algorithms.leetcode.explore.binaryTree.postorderTraversal;
+package leetcode.explore.binaryTree.postorderTraversal;
 
-import site.pushy.algorithms.leetcode.explore.binaryTree.TreeNode;
+import leetcode.explore.binaryTree.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,21 +15,22 @@ import java.util.Stack;
 public class Solution2 {
 
     public List<Integer> postorderTraversal(TreeNode root) {
-        List<Integer> res = new ArrayList<>();
-        Stack<TreeNode> stack = new Stack<>();
-        Stack<TreeNode> ansStack = new Stack<>();
+        if (root == null) return new ArrayList<>();
 
-        if (root == null) return res;
+        Stack<TreeNode> stack = new Stack<>();
+        Stack<TreeNode> ans = new Stack<>();
+
         stack.push(root);
         while (!stack.isEmpty()) {
             root = stack.pop();
-            ansStack.push(root);
+            ans.push(root);
             if (root.left != null) stack.push(root.left);
             if (root.right != null) stack.push(root.right);
         }
 
-        while (!ansStack.isEmpty()) {
-            res.add(ansStack.pop().val);
+        List<Integer> res = new ArrayList<>();
+        while (!ans.isEmpty()) {
+            res.add(ans.pop().val);
         }
         return res;
     }

@@ -1,4 +1,4 @@
-package site.pushy.algorithms.apply.stack;
+package apply.stack;
 
 import java.util.HashMap;
 import java.util.Map;

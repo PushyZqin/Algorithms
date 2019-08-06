@@ -1,4 +1,4 @@
-package site.pushy.algorithms.datastructure.linkedList;
+package datastructure.linkedList;
 
 import java.util.Arrays;
 import java.util.NoSuchElementException;

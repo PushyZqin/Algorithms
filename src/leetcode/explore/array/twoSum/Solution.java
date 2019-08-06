@@ -1,4 +1,4 @@
-package site.pushy.algorithms.leetcode.explore.array.twoSum;
+package leetcode.explore.array.twoSum;
 
 import java.util.*;
 

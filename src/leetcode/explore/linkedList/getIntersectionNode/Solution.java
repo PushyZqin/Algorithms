@@ -1,6 +1,6 @@
-package site.pushy.algorithms.leetcode.explore.linkedList.getIntersectionNode;
+package leetcode.explore.linkedList.getIntersectionNode;
 
-import site.pushy.algorithms.leetcode.explore.linkedList.ListNode;
+import leetcode.explore.linkedList.ListNode;
 
 /**
  * @author Pushy

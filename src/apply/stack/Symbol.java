@@ -1,4 +1,4 @@
-package site.pushy.algorithms.apply.stack;
+package apply.stack;
 
 import java.io.File;
 import java.io.FileInputStream;
