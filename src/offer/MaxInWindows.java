@@ -1,5 +1,8 @@
 package offer;
 
+import com.sun.jmx.remote.internal.ArrayQueue;
+
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 
 public class MaxInWindows {
@@ -46,9 +49,42 @@ public class MaxInWindows {
         return result;
     }
 
+    /**
+     * 通过双端队列来实现
+     */
+    public ArrayList<Integer> maxInWindows2(int[] nums, int size) {
+        ArrayList<Integer> res = new ArrayList<>();
+        if (nums.length < size || size < 1) {
+            return res;
+        }
+
+        ArrayDeque<Integer> queue = new ArrayDeque<>();  // 存放元素的索引
+        for (int i = 0; i < size; i++) {   // 处理第一个滑动窗口
+            while (!queue.isEmpty() && nums[i] >= nums[queue.peekLast()]) { // 弹出不可能为最大值的元素
+                queue.pollLast();
+            }
+            queue.addLast(i);
+        }
+        for (int i = size; i < nums.length; i++) {
+            res.add(nums[queue.peekFirst()]);
+            while (!queue.isEmpty() && nums[i] >= nums[queue.peekLast()]) { // 弹出不可能为最大值的元素
+                queue.pollLast();
+            }
+            // 当前滑动窗口已经不包含队列首元素，说明该最大值已经过期，删除该元素
+            if (!queue.isEmpty() && queue.peekFirst() <= (i - size)) {
+                queue.pollFirst();
+            }
+            queue.addLast(i);
+        }
+        res.add(nums[queue.peekFirst()]);
+        return res;
+    }
+
     public static void main(String[] args) {
         MaxInWindows maxInWindows = new MaxInWindows();
-        ArrayList<Integer> result = maxInWindows.maxInWindows(new int[]{16, 14, 12, 10, 8, 6, 4}, 5);
+//        int[] arr = new int[]{16, 14, 12, 10, 8, 6, 4};
+        int[] arr = new int[]{2, 3, 4, 2, 6, 2, 5, 1};
+        ArrayList<Integer> result = maxInWindows.maxInWindows2(arr, 3);
         System.out.println(result);
     }
 
